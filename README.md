@@ -1,1 +1,3 @@
-# meca
+# meca model
+
+![model](./model.png)
