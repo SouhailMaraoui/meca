@@ -103,7 +103,66 @@ insert into "UO" ("Id", "Name") values (98, 'Department');
 insert into "UO" ("Id", "Name") values (99, 'Department');
 insert into "UO" ("Id", "Name") values (100, 'Department');
 
-
+insert into "UO" ("Id", "Name") values (101, 'Service');
+insert into "UO" ("Id", "Name") values (102, 'Service');
+insert into "UO" ("Id", "Name") values (103, 'Service');
+insert into "UO" ("Id", "Name") values (104, 'Service');
+insert into "UO" ("Id", "Name") values (105, 'Service');
+insert into "UO" ("Id", "Name") values (106, 'Service');
+insert into "UO" ("Id", "Name") values (107, 'Service');
+insert into "UO" ("Id", "Name") values (108, 'Service');
+insert into "UO" ("Id", "Name") values (109, 'Service');
+insert into "UO" ("Id", "Name") values (110, 'Service');
+insert into "UO" ("Id", "Name") values (111, 'Service');
+insert into "UO" ("Id", "Name") values (112, 'Service');
+insert into "UO" ("Id", "Name") values (113, 'Service');
+insert into "UO" ("Id", "Name") values (114, 'Service');
+insert into "UO" ("Id", "Name") values (115, 'Service');
+insert into "UO" ("Id", "Name") values (116, 'Service');
+insert into "UO" ("Id", "Name") values (117, 'Service');
+insert into "UO" ("Id", "Name") values (118, 'Service');
+insert into "UO" ("Id", "Name") values (119, 'Service');
+insert into "UO" ("Id", "Name") values (120, 'Service');
+insert into "UO" ("Id", "Name") values (121, 'Service');
+insert into "UO" ("Id", "Name") values (122, 'Service');
+insert into "UO" ("Id", "Name") values (123, 'Service');
+insert into "UO" ("Id", "Name") values (124, 'Service');
+insert into "UO" ("Id", "Name") values (125, 'Service');
+insert into "UO" ("Id", "Name") values (126, 'Service');
+insert into "UO" ("Id", "Name") values (127, 'Service');
+insert into "UO" ("Id", "Name") values (128, 'Service');
+insert into "UO" ("Id", "Name") values (129, 'Service');
+insert into "UO" ("Id", "Name") values (130, 'Service');
+insert into "UO" ("Id", "Name") values (131, 'Service');
+insert into "UO" ("Id", "Name") values (132, 'Service');
+insert into "UO" ("Id", "Name") values (133, 'Service');
+insert into "UO" ("Id", "Name") values (134, 'Service');
+insert into "UO" ("Id", "Name") values (135, 'Service');
+insert into "UO" ("Id", "Name") values (136, 'Service');
+insert into "UO" ("Id", "Name") values (137, 'Service');
+insert into "UO" ("Id", "Name") values (138, 'Service');
+insert into "UO" ("Id", "Name") values (139, 'Service');
+insert into "UO" ("Id", "Name") values (140, 'Service');
+insert into "UO" ("Id", "Name") values (141, 'Service');
+insert into "UO" ("Id", "Name") values (142, 'Service');
+insert into "UO" ("Id", "Name") values (143, 'Service');
+insert into "UO" ("Id", "Name") values (144, 'Service');
+insert into "UO" ("Id", "Name") values (145, 'Service');
+insert into "UO" ("Id", "Name") values (146, 'Service');
+insert into "UO" ("Id", "Name") values (147, 'Service');
+insert into "UO" ("Id", "Name") values (148, 'Service');
+insert into "UO" ("Id", "Name") values (149, 'Service');
+insert into "UO" ("Id", "Name") values (150, 'Service');
+insert into "UO" ("Id", "Name") values (151, 'Service');
+insert into "UO" ("Id", "Name") values (152, 'Service');
+insert into "UO" ("Id", "Name") values (153, 'Service');
+insert into "UO" ("Id", "Name") values (154, 'Service');
+insert into "UO" ("Id", "Name") values (155, 'Service');
+insert into "UO" ("Id", "Name") values (156, 'Service');
+insert into "UO" ("Id", "Name") values (157, 'Service');
+insert into "UO" ("Id", "Name") values (158, 'Service');
+insert into "UO" ("Id", "Name") values (159, 'Service');
+insert into "UO" ("Id", "Name") values (160, 'Service');
 
 /*-----------Region-----------------*/
 insert into "Region" ("Id", "Name") values (1, 'Jalisco');
@@ -292,3 +351,78 @@ insert into "Department" ("Id", "IdEstablishment", "Name") values (97, 56, 'nucl
 insert into "Department" ("Id", "IdEstablishment", "Name") values (98, 56, 'orthopaedics');
 insert into "Department" ("Id", "IdEstablishment", "Name") values (99, 56, 'cardiology');
 insert into "Department" ("Id", "IdEstablishment", "Name") values (100, 56, 'ENT');
+
+/*---------Service------------Every IdDepartment in (64,69,74,94,84,87) have 10 services. 6*10 = 60 rows---------------*/
+/*
+For department of gynaecology: IdDepartment == 64,69,74,94
+We can have services: Mental health care, Laboratory and diagnostic care, Prenatal care, Nutritional support, Pharmaceutical care
+
+For department of gynaecology : neurology == 84,87
+We can have services: Mental health care,Laboratory and diagnostic care, Substance abuse treatment, Preventative care, Pharmaceutical care
+
+
+List of services : Mental health care, Dental care, Laboratory and diagnostic care, Substance abuse treatment, Preventative care, 
+Physical and occupational therapy, Nutritional support, Pharmaceutical care, Transportation, Prenatal care
+*/
+insert into "Service" ("Id", "IdDepartment", "Name") values (101, 64, 'Mental health care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (102, 64, 'Laboratory and diagnostic care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (103, 64, 'Prenatal care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (104, 64, 'Nutritional support');
+insert into "Service" ("Id", "IdDepartment", "Name") values (105, 64, 'Pharmaceutical care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (106, 64, 'Mental health care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (107, 64, 'Laboratory and diagnostic care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (108, 64, 'Prenatal care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (109, 64, 'Nutritional support');
+insert into "Service" ("Id", "IdDepartment", "Name") values (110, 64, 'Pharmaceutical care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (111, 69, 'Mental health care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (112, 69, 'Laboratory and diagnostic care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (113, 69, 'Prenatal care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (114, 69, 'Nutritional support');
+insert into "Service" ("Id", "IdDepartment", "Name") values (115, 69, 'Pharmaceutical care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (116, 69, 'Mental health care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (117, 69, 'Laboratory and diagnostic care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (118, 69, 'Prenatal care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (119, 69, 'Nutritional support');
+insert into "Service" ("Id", "IdDepartment", "Name") values (120, 69, 'Pharmaceutical care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (121, 74, 'Mental health care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (122, 74, 'Laboratory and diagnostic care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (123, 74, 'Prenatal care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (124, 74, 'Nutritional support');
+insert into "Service" ("Id", "IdDepartment", "Name") values (125, 74, 'Pharmaceutical care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (126, 74, 'Mental health care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (127, 74, 'Laboratory and diagnostic care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (128, 74, 'Prenatal care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (129, 74, 'Nutritional support');
+insert into "Service" ("Id", "IdDepartment", "Name") values (130, 74, 'Pharmaceutical care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (131, 94, 'Mental health care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (132, 94, 'Laboratory and diagnostic care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (133, 94, 'Prenatal care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (134, 94, 'Nutritional support');
+insert into "Service" ("Id", "IdDepartment", "Name") values (135, 94, 'Pharmaceutical care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (136, 94, 'Mental health care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (137, 94, 'Laboratory and diagnostic care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (138, 94, 'Prenatal care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (139, 94, 'Nutritional support');
+insert into "Service" ("Id", "IdDepartment", "Name") values (140, 94, 'Pharmaceutical care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (141, 84, 'Mental health care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (142, 84, 'Laboratory and diagnostic care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (143, 84, 'Substance abuse treatment');
+insert into "Service" ("Id", "IdDepartment", "Name") values (144, 84, 'Preventative care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (145, 84, 'Pharmaceutical care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (146, 84, 'Mental health care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (147, 84, 'Laboratory and diagnostic care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (148, 84, 'Substance abuse treatment');
+insert into "Service" ("Id", "IdDepartment", "Name") values (149, 84, 'Preventative care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (150, 84, 'Pharmaceutical care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (151, 87, 'Mental health care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (152, 87, 'Laboratory and diagnostic care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (153, 87, 'Substance abuse treatment');
+insert into "Service" ("Id", "IdDepartment", "Name") values (154, 87, 'Preventative care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (155, 87, 'Pharmaceutical care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (156, 87, 'Mental health care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (157, 87, 'Laboratory and diagnostic care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (158, 87, 'Substance abuse treatment');
+insert into "Service" ("Id", "IdDepartment", "Name") values (159, 87, 'Preventative care');
+insert into "Service" ("Id", "IdDepartment", "Name") values (160, 87, 'Pharmaceutical care');
+
+/*---------------
