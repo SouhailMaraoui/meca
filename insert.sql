@@ -357,7 +357,7 @@ insert into "Department" ("Id", "IdEstablishment", "Name") values (100, 56, 'ENT
 For department of gynaecology: IdDepartment == 64,69,74,94
 We can have services: Mental health care, Laboratory and diagnostic care, Prenatal care, Nutritional support, Pharmaceutical care
 
-For department of gynaecology : neurology == 84,87
+For department of neurology : IdDepartment == 84,87
 We can have services: Mental health care,Laboratory and diagnostic care, Substance abuse treatment, Preventative care, Pharmaceutical care
 
 
