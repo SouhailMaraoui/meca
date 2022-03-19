@@ -425,4 +425,20 @@ insert into "Service" ("Id", "IdDepartment", "Name") values (158, 87, 'Substance
 insert into "Service" ("Id", "IdDepartment", "Name") values (159, 87, 'Preventative care');
 insert into "Service" ("Id", "IdDepartment", "Name") values (160, 87, 'Pharmaceutical care');
 
-/*---------------
+/*---------------Permit--------10 rows----------------*/
+/*
+Mental health care permit, Dental care permit, Laboratory and diagnostic care permit, Substance abuse treatment permit, 
+Preventative care permit, Physical and occupational therapy permit, Nutritional support permit, Pharmaceutical care permit, Transportation permit, Prenatal care permit
+*/
+insert into "Permit" ("Id", "Name") values (1, 'Mental health care permit');
+insert into "Permit" ("Id", "Name") values (2, 'Dental care permit');
+insert into "Permit" ("Id", "Name") values (3, 'Laboratory and diagnostic care permit');
+insert into "Permit" ("Id", "Name") values (4, 'Substance abuse treatment permit');
+insert into "Permit" ("Id", "Name") values (5, 'Preventative care permit');
+insert into "Permit" ("Id", "Name") values (6, 'Physical and occupational therapy permit');
+insert into "Permit" ("Id", "Name") values (7, 'Nutritional support permit');
+insert into "Permit" ("Id", "Name") values (8, 'Pharmaceutical care permit');
+insert into "Permit" ("Id", "Name") values (9, 'Transportation permit');
+insert into "Permit" ("Id", "Name") values (10, 'Prenatal care permit');
+
+/*-----------------
