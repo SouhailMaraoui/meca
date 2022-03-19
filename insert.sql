@@ -21,7 +21,48 @@ insert into "UO" ("Id", "Name") values (18, 'Region');
 insert into "UO" ("Id", "Name") values (19, 'Region');
 insert into "UO" ("Id", "Name") values (20, 'Region');
 
-select * from "UO";
+insert into "UO" ("Id", "Name") values (21, 'Establishment');
+insert into "UO" ("Id", "Name") values (22, 'Establishment');
+insert into "UO" ("Id", "Name") values (23, 'Establishment');
+insert into "UO" ("Id", "Name") values (24, 'Establishment');
+insert into "UO" ("Id", "Name") values (25, 'Establishment');
+insert into "UO" ("Id", "Name") values (26, 'Establishment');
+insert into "UO" ("Id", "Name") values (27, 'Establishment');
+insert into "UO" ("Id", "Name") values (28, 'Establishment');
+insert into "UO" ("Id", "Name") values (29, 'Establishment');
+insert into "UO" ("Id", "Name") values (30, 'Establishment');
+insert into "UO" ("Id", "Name") values (31, 'Establishment');
+insert into "UO" ("Id", "Name") values (32, 'Establishment');
+insert into "UO" ("Id", "Name") values (33, 'Establishment');
+insert into "UO" ("Id", "Name") values (34, 'Establishment');
+insert into "UO" ("Id", "Name") values (35, 'Establishment');
+insert into "UO" ("Id", "Name") values (36, 'Establishment');
+insert into "UO" ("Id", "Name") values (37, 'Establishment');
+insert into "UO" ("Id", "Name") values (38, 'Establishment');
+insert into "UO" ("Id", "Name") values (39, 'Establishment');
+insert into "UO" ("Id", "Name") values (40, 'Establishment');
+insert into "UO" ("Id", "Name") values (41, 'Establishment');
+insert into "UO" ("Id", "Name") values (42, 'Establishment');
+insert into "UO" ("Id", "Name") values (43, 'Establishment');
+insert into "UO" ("Id", "Name") values (44, 'Establishment');
+insert into "UO" ("Id", "Name") values (45, 'Establishment');
+insert into "UO" ("Id", "Name") values (46, 'Establishment');
+insert into "UO" ("Id", "Name") values (47, 'Establishment');
+insert into "UO" ("Id", "Name") values (48, 'Establishment');
+insert into "UO" ("Id", "Name") values (49, 'Establishment');
+insert into "UO" ("Id", "Name") values (50, 'Establishment');
+insert into "UO" ("Id", "Name") values (51, 'Establishment');
+insert into "UO" ("Id", "Name") values (52, 'Establishment');
+insert into "UO" ("Id", "Name") values (53, 'Establishment');
+insert into "UO" ("Id", "Name") values (54, 'Establishment');
+insert into "UO" ("Id", "Name") values (55, 'Establishment');
+insert into "UO" ("Id", "Name") values (56, 'Establishment');
+insert into "UO" ("Id", "Name") values (57, 'Establishment');
+insert into "UO" ("Id", "Name") values (58, 'Establishment');
+insert into "UO" ("Id", "Name") values (59, 'Establishment');
+insert into "UO" ("Id", "Name") values (60, 'Establishment');
+
+
 
 /*-----------Region-----------------*/
 insert into "Region" ("Id", "Name") values (1, 'Jalisco');
@@ -77,7 +118,7 @@ insert into "City" ("Id", "IdRegion", "Name") values (28, 7, 'Kurumoch');
 insert into "City" ("Id", "IdRegion", "Name") values (29, 8, 'Qarqaraly');
 insert into "City" ("Id", "IdRegion", "Name") values (30, 9, 'Ya‘bad');
 
-/*---------------Address-------------------------*/
+/*---------------Address-----(40rows)--------------------*/
 insert into "Address" ("Id", "IdCity", "StreetName", "StreetNumber") values (1, 1, 'Stang', '5885');
 insert into "Address" ("Id", "IdCity", "StreetName", "StreetNumber") values (2, 2, 'Clyde Gallagher', '0');
 insert into "Address" ("Id", "IdCity", "StreetName", "StreetNumber") values (3, 3, 'Stuart', '9');
@@ -118,3 +159,51 @@ insert into "Address" ("Id", "IdCity", "StreetName", "StreetNumber") values (37,
 insert into "Address" ("Id", "IdCity", "StreetName", "StreetNumber") values (38, 7, 'Rieder', '87');
 insert into "Address" ("Id", "IdCity", "StreetName", "StreetNumber") values (39, 8, 'Trailsway', '7');
 insert into "Address" ("Id", "IdCity", "StreetName", "StreetNumber") values (40, 9, 'Rieder', '71528');
+
+/*-----------------Establishment--(40 rows)--------------------------*/
+/*healthcare establishment means a hospital, diagnostic centre, medical clinics, nursing home, maternity home, 
+dental clinic, homeopathy clinic, Tibb clinic, acupuncture, physiotherapy clinic or any other premises or conveyance–*/
+/*hospital, diagnostic centre, medical clinics, nursing home, maternity home, dental clinic, homeopathy clinic, acupuncture, physiotherapy clinic, Tibb clinic*/
+
+insert into "Establishment" ("Id", "IdAddress", "Name") values (21, 1, 'Tibb clinic');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (22, 2, 'dental clinic');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (23, 3, 'hospital');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (24, 4, 'hospital');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (25, 5, 'medical clinics');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (26, 6, 'diagnostic centre');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (27, 7, 'maternity home');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (28, 8, 'acupuncture');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (29, 9, 'hospital');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (30, 10, 'acupuncture');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (31, 11, 'maternity home');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (32, 12, 'physiotherapy clinic');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (33, 13, 'homeopathy clinic');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (34, 14, 'Tibb clinic');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (35, 15, 'dental clinic');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (36, 16, 'maternity home');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (37, 17, 'homeopathy clinic');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (38, 18, 'nursing home');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (39, 19, 'medical clinics');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (40, 20, 'dental clinic');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (41, 21, 'diagnostic centre');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (42, 22, 'acupuncture');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (43, 23, 'diagnostic centre');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (44, 24, 'diagnostic centre');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (45, 25, 'diagnostic centre');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (46, 26, 'medical clinics');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (47, 27, 'acupuncture');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (48, 28, 'homeopathy clinic');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (49, 29, 'nursing home');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (50, 30, 'Tibb clinic');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (51, 31, 'physiotherapy clinic');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (52, 32, 'diagnostic centre');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (53, 33, 'acupuncture');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (54, 34, 'hospital');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (55, 35, 'physiotherapy clinic');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (56, 36, 'medical clinics');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (57, 37, 'maternity home');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (58, 38, 'acupuncture');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (59, 39, 'physiotherapy clinic');
+insert into "Establishment" ("Id", "IdAddress", "Name") values (60, 40, 'dental clinic');
+
+/*----------
