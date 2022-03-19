@@ -1,4 +1,4 @@
-INSERT INTO "ECA" VALUES(1,1);
+
 /*----------------UO-----------------*/
 insert into "UO" ("Id", "Name") values (1, 'Regiona');
 insert into "UO" ("Id", "Name") values (2, 'Region');
@@ -61,6 +61,47 @@ insert into "UO" ("Id", "Name") values (57, 'Establishment');
 insert into "UO" ("Id", "Name") values (58, 'Establishment');
 insert into "UO" ("Id", "Name") values (59, 'Establishment');
 insert into "UO" ("Id", "Name") values (60, 'Establishment');
+
+insert into "UO" ("Id", "Name") values (61, 'Department');
+insert into "UO" ("Id", "Name") values (62, 'Department');
+insert into "UO" ("Id", "Name") values (63, 'Department');
+insert into "UO" ("Id", "Name") values (64, 'Department');
+insert into "UO" ("Id", "Name") values (65, 'Department');
+insert into "UO" ("Id", "Name") values (66, 'Department');
+insert into "UO" ("Id", "Name") values (67, 'Department');
+insert into "UO" ("Id", "Name") values (68, 'Department');
+insert into "UO" ("Id", "Name") values (69, 'Department');
+insert into "UO" ("Id", "Name") values (70, 'Department');
+insert into "UO" ("Id", "Name") values (71, 'Department');
+insert into "UO" ("Id", "Name") values (72, 'Department');
+insert into "UO" ("Id", "Name") values (73, 'Department');
+insert into "UO" ("Id", "Name") values (74, 'Department');
+insert into "UO" ("Id", "Name") values (75, 'Department');
+insert into "UO" ("Id", "Name") values (76, 'Department');
+insert into "UO" ("Id", "Name") values (77, 'Department');
+insert into "UO" ("Id", "Name") values (78, 'Department');
+insert into "UO" ("Id", "Name") values (79, 'Department');
+insert into "UO" ("Id", "Name") values (80, 'Department');
+insert into "UO" ("Id", "Name") values (81, 'Department');
+insert into "UO" ("Id", "Name") values (82, 'Department');
+insert into "UO" ("Id", "Name") values (83, 'Department');
+insert into "UO" ("Id", "Name") values (84, 'Department');
+insert into "UO" ("Id", "Name") values (85, 'Department');
+insert into "UO" ("Id", "Name") values (86, 'Department');
+insert into "UO" ("Id", "Name") values (87, 'Department');
+insert into "UO" ("Id", "Name") values (88, 'Department');
+insert into "UO" ("Id", "Name") values (89, 'Department');
+insert into "UO" ("Id", "Name") values (90, 'Department');
+insert into "UO" ("Id", "Name") values (91, 'Department');
+insert into "UO" ("Id", "Name") values (92, 'Department');
+insert into "UO" ("Id", "Name") values (93, 'Department');
+insert into "UO" ("Id", "Name") values (94, 'Department');
+insert into "UO" ("Id", "Name") values (95, 'Department');
+insert into "UO" ("Id", "Name") values (96, 'Department');
+insert into "UO" ("Id", "Name") values (97, 'Department');
+insert into "UO" ("Id", "Name") values (98, 'Department');
+insert into "UO" ("Id", "Name") values (99, 'Department');
+insert into "UO" ("Id", "Name") values (100, 'Department');
 
 
 
@@ -206,4 +247,48 @@ insert into "Establishment" ("Id", "IdAddress", "Name") values (58, 38, 'acupunc
 insert into "Establishment" ("Id", "IdAddress", "Name") values (59, 39, 'physiotherapy clinic');
 insert into "Establishment" ("Id", "IdAddress", "Name") values (60, 40, 'dental clinic');
 
-/*----------
+/*----------Department---------------------------------*/
+/* 
+What are the departments in medical field?
+medicine, surgery, gynaecology, obstetrics, paediatrics, eye, ENT, dental, orthopaedics, neurology, cardiology, psychiatry, skin, V.D., plastic surgery, nuclear medicine, infectious disease
+*/
+insert into "Department" ("Id", "IdEstablishment", "Name") values (61, 23, 'skin');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (62, 23, 'V.D.');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (63, 23, 'nuclear medicine');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (64, 23, 'gynaecology');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (65, 23, 'psychiatry');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (66, 24, 'paediatrics');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (67, 24, 'nuclear medicine');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (68, 24, 'V.D.');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (69, 24, 'gynaecology');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (70, 24, 'plastic surgery');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (71, 29, 'obstetrics');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (72, 29, 'medicine');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (73, 29, 'infectious disease');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (74, 29, 'gynaecology');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (75, 29, 'obstetrics');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (76, 54, 'paediatrics');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (77, 54, 'nuclear medicine');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (78, 54, 'paediatrics');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (79, 54, 'skin');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (80, 54, 'plastic surgery');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (81, 25, 'eye');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (82, 25, 'skin');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (83, 25, 'V.D.');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (84, 25, 'neurology');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (85, 25, 'nuclear medicine');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (86, 39, 'skin');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (87, 39, 'neurology');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (88, 39, 'dental');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (89, 39, 'orthopaedics');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (90, 39, 'infectious disease');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (91, 46, 'obstetrics');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (92, 46, 'skin');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (93, 46, 'nuclear medicine');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (94, 46, 'gynaecology');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (95, 46, 'psychiatry');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (96, 56, 'paediatrics');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (97, 56, 'nuclear medicine');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (98, 56, 'orthopaedics');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (99, 56, 'cardiology');
+insert into "Department" ("Id", "IdEstablishment", "Name") values (100, 56, 'ENT');
