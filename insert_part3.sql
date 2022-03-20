@@ -46,12 +46,39 @@ insert into "ActivityPermit" ("IdActivity", "IdPermit") values (8, 1);
 insert into "ActivityPermit" ("IdActivity", "IdPermit") values (9, 3);
 insert into "ActivityPermit" ("IdActivity", "IdPermit") values (10, 3);
 
-/*------------UOActivity----------------------*/
-/* the dataset focus on activities of two departments: gynaecology and neurology
-Activity list:
+/*------------UOActivity-------30 rows---------------*/
+/* ActivityId: (1-10)  UOId: (61-160)
 */
-
-
+insert into "UOActivity" ("IdActivity", "IdUO") values (2, 100);
+insert into "UOActivity" ("IdActivity", "IdUO") values (4, 90);
+insert into "UOActivity" ("IdActivity", "IdUO") values (2, 99);
+insert into "UOActivity" ("IdActivity", "IdUO") values (7, 119);
+insert into "UOActivity" ("IdActivity", "IdUO") values (7, 139);
+insert into "UOActivity" ("IdActivity", "IdUO") values (2, 69);
+insert into "UOActivity" ("IdActivity", "IdUO") values (2, 85);
+insert into "UOActivity" ("IdActivity", "IdUO") values (7, 143);
+insert into "UOActivity" ("IdActivity", "IdUO") values (3, 139);
+insert into "UOActivity" ("IdActivity", "IdUO") values (3, 86);
+insert into "UOActivity" ("IdActivity", "IdUO") values (3, 137);
+insert into "UOActivity" ("IdActivity", "IdUO") values (3, 70);
+insert into "UOActivity" ("IdActivity", "IdUO") values (5, 150);
+insert into "UOActivity" ("IdActivity", "IdUO") values (10, 100);
+insert into "UOActivity" ("IdActivity", "IdUO") values (2, 135);
+insert into "UOActivity" ("IdActivity", "IdUO") values (6, 73);
+insert into "UOActivity" ("IdActivity", "IdUO") values (8, 119);
+insert into "UOActivity" ("IdActivity", "IdUO") values (1, 145);
+insert into "UOActivity" ("IdActivity", "IdUO") values (2, 129);
+insert into "UOActivity" ("IdActivity", "IdUO") values (1, 141);
+insert into "UOActivity" ("IdActivity", "IdUO") values (3, 95);
+insert into "UOActivity" ("IdActivity", "IdUO") values (3, 136);
+insert into "UOActivity" ("IdActivity", "IdUO") values (6, 117);
+insert into "UOActivity" ("IdActivity", "IdUO") values (6, 135);
+insert into "UOActivity" ("IdActivity", "IdUO") values (4, 152);
+insert into "UOActivity" ("IdActivity", "IdUO") values (9, 92);
+insert into "UOActivity" ("IdActivity", "IdUO") values (9, 108);
+insert into "UOActivity" ("IdActivity", "IdUO") values (2, 105);
+insert into "UOActivity" ("IdActivity", "IdUO") values (10, 101);
+insert into "UOActivity" ("IdActivity", "IdUO") values (9, 90);
 
 /*------------NeedsPrevision----------------------*/
 
