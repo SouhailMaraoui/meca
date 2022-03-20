@@ -49,41 +49,74 @@ insert into "ActivityPermit" ("IdActivity", "IdPermit") values (10, 3);
 /*------------UOActivity-------30 rows---------------*/
 /* ActivityId: (1-10)  UOId: (61-160)
 */
-insert into "UOActivity" ("IdActivity", "IdUO") values (2, 100);
-insert into "UOActivity" ("IdActivity", "IdUO") values (4, 90);
-insert into "UOActivity" ("IdActivity", "IdUO") values (2, 99);
-insert into "UOActivity" ("IdActivity", "IdUO") values (7, 119);
-insert into "UOActivity" ("IdActivity", "IdUO") values (7, 139);
-insert into "UOActivity" ("IdActivity", "IdUO") values (2, 69);
-insert into "UOActivity" ("IdActivity", "IdUO") values (2, 85);
-insert into "UOActivity" ("IdActivity", "IdUO") values (7, 143);
-insert into "UOActivity" ("IdActivity", "IdUO") values (3, 139);
-insert into "UOActivity" ("IdActivity", "IdUO") values (3, 86);
-insert into "UOActivity" ("IdActivity", "IdUO") values (3, 137);
-insert into "UOActivity" ("IdActivity", "IdUO") values (3, 70);
-insert into "UOActivity" ("IdActivity", "IdUO") values (5, 150);
-insert into "UOActivity" ("IdActivity", "IdUO") values (10, 100);
-insert into "UOActivity" ("IdActivity", "IdUO") values (2, 135);
-insert into "UOActivity" ("IdActivity", "IdUO") values (6, 73);
-insert into "UOActivity" ("IdActivity", "IdUO") values (8, 119);
-insert into "UOActivity" ("IdActivity", "IdUO") values (1, 145);
+insert into "UOActivity" ("IdActivity", "IdUO") values (1, 100);
+insert into "UOActivity" ("IdActivity", "IdUO") values (1, 135);
+insert into "UOActivity" ("IdActivity", "IdUO") values (1, 73);
+insert into "UOActivity" ("IdActivity", "IdUO") values (2, 119);
+insert into "UOActivity" ("IdActivity", "IdUO") values (2, 145);
 insert into "UOActivity" ("IdActivity", "IdUO") values (2, 129);
-insert into "UOActivity" ("IdActivity", "IdUO") values (1, 141);
+insert into "UOActivity" ("IdActivity", "IdUO") values (3, 141);
 insert into "UOActivity" ("IdActivity", "IdUO") values (3, 95);
 insert into "UOActivity" ("IdActivity", "IdUO") values (3, 136);
-insert into "UOActivity" ("IdActivity", "IdUO") values (6, 117);
-insert into "UOActivity" ("IdActivity", "IdUO") values (6, 135);
+insert into "UOActivity" ("IdActivity", "IdUO") values (4, 117);
+insert into "UOActivity" ("IdActivity", "IdUO") values (4, 135);
 insert into "UOActivity" ("IdActivity", "IdUO") values (4, 152);
-insert into "UOActivity" ("IdActivity", "IdUO") values (9, 92);
-insert into "UOActivity" ("IdActivity", "IdUO") values (9, 108);
-insert into "UOActivity" ("IdActivity", "IdUO") values (2, 105);
-insert into "UOActivity" ("IdActivity", "IdUO") values (10, 101);
-insert into "UOActivity" ("IdActivity", "IdUO") values (9, 90);
+insert into "UOActivity" ("IdActivity", "IdUO") values (5, 92);
+insert into "UOActivity" ("IdActivity", "IdUO") values (5, 108);
+insert into "UOActivity" ("IdActivity", "IdUO") values (5, 65);
+insert into "UOActivity" ("IdActivity", "IdUO") values (6, 81);
+insert into "UOActivity" ("IdActivity", "IdUO") values (6, 90);
+insert into "UOActivity" ("IdActivity", "IdUO") values (6, 92);
+insert into "UOActivity" ("IdActivity", "IdUO") values (7, 72);
+insert into "UOActivity" ("IdActivity", "IdUO") values (7, 144);
+insert into "UOActivity" ("IdActivity", "IdUO") values (7, 88);
+insert into "UOActivity" ("IdActivity", "IdUO") values (8, 104);
+insert into "UOActivity" ("IdActivity", "IdUO") values (8, 70);
+insert into "UOActivity" ("IdActivity", "IdUO") values (8, 103);
+insert into "UOActivity" ("IdActivity", "IdUO") values (9, 125);
+insert into "UOActivity" ("IdActivity", "IdUO") values (9, 63);
+insert into "UOActivity" ("IdActivity", "IdUO") values (9, 109);
+insert into "UOActivity" ("IdActivity", "IdUO") values (10, 78);
+insert into "UOActivity" ("IdActivity", "IdUO") values (10, 149);
+insert into "UOActivity" ("IdActivity", "IdUO") values (10, 159);
 
 /*------------NeedsPrevision----------------------*/
-
-
-
+/* ActivityId and  UOId are consistent with table UOActivity */
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (1, 1, 100, 5, ['2022-05-27','2022-06-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (2, 1, 135, 2, ['2022-05-26','2022-06-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (3, 1, 76, 4, ['2022-05-15','2022-06-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (4, 2, 119, 1, ['2022-04-27','2022-05-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (5, 2, 145, 4, ['2022-06-20','2022-07-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (6, 2, 129, 4, ['2022-05-09','2022-06-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (7, 3, 141, 3, ['2022-07-13','2022-08-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (8, 3, 95, 5, ['2022-05-24','2022-06-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (9, 3, 136, 3, ['2021-07-23','2022-08-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (10, 4, 117, 4, ['2021-05-04','2022-06-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (11, 4, 135, 3, ['2021-05-29','2022-06-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (12, 4, 152, 1, ['2022-06-25','2022-07-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (13, 5, 92, 3, ['2021-05-14','2022-06-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (14, 5, 108, 5, ['2021-06-14','2022-07-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (15, 5, 65, 3, ['2022-06-02','2022-07-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (16, 6, 81, 4, ['2021-06-30','2022-07-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (17, 6, 90, 5, ['2022-07-08','2022-08-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (18, 6, 92, 3, ['2021-07-05','2022-08-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (19, 7, 72, 3, ['2021-07-06','2022-08-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (20, 7, 144, 1, ['2022-07-18','2022-07-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (21, 7, 88, 3, ['2021-06-01','2022-06-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (22, 8, 104, 1, ['2021-07-21','2022-08-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (23, 8, 70, 2, ['2022-07-26','2022-08-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (24, 8, 103, 5, ['2021-06-08','2022-07-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (25, 9, 63, 3, ['2022-07-08','2022-08-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (26, 9, 109, 1, ['2021-06-02','2022-06-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (27, 9, 125, 2, ['2022-05-30','2022-06-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (28, 10, 78, 5, ['2022-06-02','2022-07-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (29, 10, 149, 1, ['2021-06-14','2022-06-27']);
+insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "WorkQuantity", "DateRange") values (30, 10, 159, 1, ['2021-07-18','2022-07-27']);
 
 
 /*------------Affectation----------------------*/
+insert into "Affectation" ("Id", "IdPersonnel", "IdProgramme", "IdUO", "DateRange", "WorkQuantity") values (1, 3, 9, 100, ['2022-05-27','2022-06-27'], 1);
+insert into "Affectation" ("Id", "IdPersonnel", "IdProgramme", "IdUO", "DateRange", "WorkQuantity") values (2, 13, 8, 100, ['2022-05-27','2022-06-27'], 1);
+insert into "Affectation" ("Id", "IdPersonnel", "IdProgramme", "IdUO", "DateRange", "WorkQuantity") values (3, 23, 11, 100, ['2022-05-27','2022-06-27'], 1);
+insert into "Affectation" ("Id", "IdPersonnel", "IdProgramme", "IdUO", "DateRange", "WorkQuantity") values (4, 33, 12, 100, ['2022-05-27','2022-06-27'], 1);
+insert into "Affectation" ("Id", "IdPersonnel", "IdProgramme", "IdUO", "DateRange", "WorkQuantity") values (5, 43, 10, 100, ['2022-05-27','2022-06-27'], 1);
