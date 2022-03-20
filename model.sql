@@ -10,10 +10,7 @@ DROP TABLE IF EXISTS "ActivityPermit" CASCADE
 DROP TABLE IF EXISTS "Address" CASCADE
 ;
 
-DROP TABLE IF EXISTS "Affectation" CASCADE
-;
-
-DROP TABLE IF EXISTS "AffectationPrevision" CASCADE
+DROP TABLE IF EXISTS "Assignment" CASCADE
 ;
 
 DROP TABLE IF EXISTS "City" CASCADE
@@ -22,7 +19,7 @@ DROP TABLE IF EXISTS "City" CASCADE
 DROP TABLE IF EXISTS "Department" CASCADE
 ;
 
-DROP TABLE IF EXISTS "ECA" CASCADE
+DROP TABLE IF EXISTS "TypeECA" CASCADE
 ;
 
 DROP TABLE IF EXISTS "Establishment" CASCADE
@@ -34,7 +31,7 @@ DROP TABLE IF EXISTS "NeedsPrevision" CASCADE
 DROP TABLE IF EXISTS "Permit" CASCADE
 ;
 
-DROP TABLE IF EXISTS "Personnel" CASCADE
+DROP TABLE IF EXISTS "ECA" CASCADE
 ;
 
 DROP TABLE IF EXISTS "Programme" CASCADE
@@ -76,10 +73,10 @@ CREATE TABLE "Address"
 )
 ;
 
-CREATE TABLE "Affectation"
+CREATE TABLE "Assignment"
 (
 	"Id" integer NOT NULL,
-	"IdPersonnel" integer NOT NULL,
+	"IdECA" integer NOT NULL,
 	"IdProgramme" integer NOT NULL,
 	"IdUO" integer NOT NULL,
 	"DateRange" daterange NOT NULL,
@@ -103,7 +100,7 @@ CREATE TABLE "Department"
 )
 ;
 
-CREATE TABLE "ECA"
+CREATE TABLE "TypeECA"
 (
 	"Id" integer NOT NULL,
 	"Name" varchar(50) NOT NULL
@@ -123,6 +120,7 @@ CREATE TABLE "NeedsPrevision"
 	"Id" integer NOT NULL,
 	"IdUO" integer NOT NULL,
 	"IdActivity" integer NOT NULL,
+	"IdTypeECA" integer NOT NULL,
 	"WorkQuantity" integer NOT NULL,
 	"DateRange" daterange NOT NULL
 )
@@ -135,11 +133,11 @@ CREATE TABLE "Permit"
 )
 ;
 
-CREATE TABLE "Personnel"
+CREATE TABLE "ECA"
 (
 	"Id" integer NOT NULL,
-	"IdECA" integer NOT NULL,
 	"IdPermit" integer NOT NULL,
+	"IdTypeECA" integer NOT NULL,
 	"Lastname" varchar(50) NOT NULL,
 	"Firstname" varchar(50) NOT NULL,
 	"IdAddress" integer NOT NULL
@@ -195,7 +193,7 @@ ALTER TABLE "Address" ADD CONSTRAINT "PK_Address"
 	PRIMARY KEY ("Id")
 ;
 
-ALTER TABLE "Affectation" ADD CONSTRAINT "PK_Affectation"
+ALTER TABLE "Assignment" ADD CONSTRAINT "PK_Assignment"
 	PRIMARY KEY ("Id")
 ;
 
@@ -207,7 +205,7 @@ ALTER TABLE "Department" ADD CONSTRAINT "PK_Department"
 	PRIMARY KEY ("Id")
 ;
 
-ALTER TABLE "ECA" ADD CONSTRAINT "PK_ECA"
+ALTER TABLE "TypeECA" ADD CONSTRAINT "PK_TypeECA"
 	PRIMARY KEY ("Id")
 ;
 
@@ -223,7 +221,7 @@ ALTER TABLE "Permit" ADD CONSTRAINT "PK_Permit"
 	PRIMARY KEY ("Id")
 ;
 
-ALTER TABLE "Personnel" ADD CONSTRAINT "PK_Personnel"
+ALTER TABLE "ECA" ADD CONSTRAINT "PK_ECA"
 	PRIMARY KEY ("Id")
 ;
 
@@ -256,15 +254,15 @@ ALTER TABLE "ActivityPermit" ADD CONSTRAINT "FK_ActivityPermit_Permit"
 	FOREIGN KEY ("IdPermit") REFERENCES "Permit" ("Id") ON DELETE No Action ON UPDATE No Action
 ;
 
-ALTER TABLE "Affectation" ADD CONSTRAINT "FK_Affectation_Activity"
+ALTER TABLE "Assignment" ADD CONSTRAINT "FK_Assignment_Activity"
 	FOREIGN KEY ("IdUO") REFERENCES "UO" ("Id") ON DELETE No Action ON UPDATE No Action
 ;
 
-ALTER TABLE "Affectation" ADD CONSTRAINT "FK_Affectation_Personnel"
-	FOREIGN KEY ("IdPersonnel") REFERENCES "Personnel" ("Id") ON DELETE No Action ON UPDATE No Action
+ALTER TABLE "Assignment" ADD CONSTRAINT "FK_Assignment_ECA"
+	FOREIGN KEY ("IdECA") REFERENCES "ECA" ("Id") ON DELETE No Action ON UPDATE No Action
 ;
 
-ALTER TABLE "Affectation" ADD CONSTRAINT "FK_Affectation_Programme"
+ALTER TABLE "Assignment" ADD CONSTRAINT "FK_Assignment_Programme"
 	FOREIGN KEY ("IdProgramme") REFERENCES "Programme" ("Id") ON DELETE No Action ON UPDATE No Action
 ;
 
@@ -276,15 +274,19 @@ ALTER TABLE "NeedsPrevision" ADD CONSTRAINT "FK_NeedsPrevision_Activity"
 	FOREIGN KEY ("IdActivity") REFERENCES "Activity" ("Id") ON DELETE No Action ON UPDATE No Action
 ;
 
-ALTER TABLE "Personnel" ADD CONSTRAINT "FK_Personnel_ECA"
-	FOREIGN KEY ("IdECA") REFERENCES "ECA" ("Id") ON DELETE No Action ON UPDATE No Action
+ALTER TABLE "NeedsPrevision" ADD CONSTRAINT "FK_NeedsPrevision_TypeECA"
+	FOREIGN KEY ("IdTypeECA") REFERENCES "TypeECA" ("Id") ON DELETE No Action ON UPDATE No Action
 ;
 
-ALTER TABLE "Personnel" ADD CONSTRAINT "FK_Personnel_Permit"
+ALTER TABLE "ECA" ADD CONSTRAINT "FK_TypeECA"
+	FOREIGN KEY ("IdTypeECA") REFERENCES "ECA" ("Id") ON DELETE No Action ON UPDATE No Action
+;
+
+ALTER TABLE "ECA" ADD CONSTRAINT "FK_ECA_Permit"
 	FOREIGN KEY ("IdPermit") REFERENCES "Permit" ("Id") ON DELETE No Action ON UPDATE No Action
 ;
 
-ALTER TABLE "Personnel" ADD CONSTRAINT "FK_Personnel_Address"
+ALTER TABLE "ECA" ADD CONSTRAINT "FK_ECA_Address"
 	FOREIGN KEY ("IdAddress") REFERENCES "Address" ("Id") ON DELETE No Action ON UPDATE No Action
 ;
 
