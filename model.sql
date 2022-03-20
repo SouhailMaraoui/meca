@@ -106,7 +106,7 @@ CREATE TABLE "Department"
 CREATE TABLE "ECA"
 (
 	"Id" integer NOT NULL,
-	"Name" integer NOT NULL
+	"Name" varchar(50) NOT NULL
 )
 ;
 
