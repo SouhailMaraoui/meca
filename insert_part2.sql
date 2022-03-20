@@ -1,7 +1,7 @@
 /*-----------------Personnel-------8 departments * 10 permits * 5 = 400 rows ------------------*/
 /* the dataset focus on ECA of 8 departments (4 hospital: IdEstablishment == 23,24,29,54 (IdAddress == 3,4,9,34) ; 
 4 medical clinics: IdEstablishment == 25,39,46,56  (IdAddress == 5,19,26,36))
-In each department, every permit have 5 ECA
+
 select * from "Establishment" where "Name"='hospital';
 select * from "Establishment" where "Name"='medical clinics';
  */
