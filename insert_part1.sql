@@ -1,168 +1,168 @@
 
 /*----------------UO-----------------*/
-insert into "UO" ("Id", "Name") values (1, 'Region');
-insert into "UO" ("Id", "Name") values (2, 'Region');
-insert into "UO" ("Id", "Name") values (3, 'Region');
-insert into "UO" ("Id", "Name") values (4, 'Region');
-insert into "UO" ("Id", "Name") values (5, 'Region');
-insert into "UO" ("Id", "Name") values (6, 'Region');
-insert into "UO" ("Id", "Name") values (7, 'Region');
-insert into "UO" ("Id", "Name") values (8, 'Region');
-insert into "UO" ("Id", "Name") values (9, 'Region');
-insert into "UO" ("Id", "Name") values (10, 'Region');
-insert into "UO" ("Id", "Name") values (11, 'Region');
-insert into "UO" ("Id", "Name") values (12, 'Region');
-insert into "UO" ("Id", "Name") values (13, 'Region');
-insert into "UO" ("Id", "Name") values (14, 'Region');
-insert into "UO" ("Id", "Name") values (15, 'Region');
-insert into "UO" ("Id", "Name") values (16, 'Region');
-insert into "UO" ("Id", "Name") values (17, 'Region');
-insert into "UO" ("Id", "Name") values (18, 'Region');
-insert into "UO" ("Id", "Name") values (19, 'Region');
-insert into "UO" ("Id", "Name") values (20, 'Region');
+insert into "UO" ("Id") values (1);
+insert into "UO" ("Id") values (2);
+insert into "UO" ("Id") values (3);
+insert into "UO" ("Id") values (4);
+insert into "UO" ("Id") values (5);
+insert into "UO" ("Id") values (6);
+insert into "UO" ("Id") values (7);
+insert into "UO" ("Id") values (8);
+insert into "UO" ("Id") values (9);
+insert into "UO" ("Id") values (10);
+insert into "UO" ("Id") values (11);
+insert into "UO" ("Id") values (12);
+insert into "UO" ("Id") values (13);
+insert into "UO" ("Id") values (14);
+insert into "UO" ("Id") values (15);
+insert into "UO" ("Id") values (16);
+insert into "UO" ("Id") values (17);
+insert into "UO" ("Id") values (18);
+insert into "UO" ("Id") values (19);
+insert into "UO" ("Id") values (20);
 
-insert into "UO" ("Id", "Name") values (21, 'Establishment');
-insert into "UO" ("Id", "Name") values (22, 'Establishment');
-insert into "UO" ("Id", "Name") values (23, 'Establishment');
-insert into "UO" ("Id", "Name") values (24, 'Establishment');
-insert into "UO" ("Id", "Name") values (25, 'Establishment');
-insert into "UO" ("Id", "Name") values (26, 'Establishment');
-insert into "UO" ("Id", "Name") values (27, 'Establishment');
-insert into "UO" ("Id", "Name") values (28, 'Establishment');
-insert into "UO" ("Id", "Name") values (29, 'Establishment');
-insert into "UO" ("Id", "Name") values (30, 'Establishment');
-insert into "UO" ("Id", "Name") values (31, 'Establishment');
-insert into "UO" ("Id", "Name") values (32, 'Establishment');
-insert into "UO" ("Id", "Name") values (33, 'Establishment');
-insert into "UO" ("Id", "Name") values (34, 'Establishment');
-insert into "UO" ("Id", "Name") values (35, 'Establishment');
-insert into "UO" ("Id", "Name") values (36, 'Establishment');
-insert into "UO" ("Id", "Name") values (37, 'Establishment');
-insert into "UO" ("Id", "Name") values (38, 'Establishment');
-insert into "UO" ("Id", "Name") values (39, 'Establishment');
-insert into "UO" ("Id", "Name") values (40, 'Establishment');
-insert into "UO" ("Id", "Name") values (41, 'Establishment');
-insert into "UO" ("Id", "Name") values (42, 'Establishment');
-insert into "UO" ("Id", "Name") values (43, 'Establishment');
-insert into "UO" ("Id", "Name") values (44, 'Establishment');
-insert into "UO" ("Id", "Name") values (45, 'Establishment');
-insert into "UO" ("Id", "Name") values (46, 'Establishment');
-insert into "UO" ("Id", "Name") values (47, 'Establishment');
-insert into "UO" ("Id", "Name") values (48, 'Establishment');
-insert into "UO" ("Id", "Name") values (49, 'Establishment');
-insert into "UO" ("Id", "Name") values (50, 'Establishment');
-insert into "UO" ("Id", "Name") values (51, 'Establishment');
-insert into "UO" ("Id", "Name") values (52, 'Establishment');
-insert into "UO" ("Id", "Name") values (53, 'Establishment');
-insert into "UO" ("Id", "Name") values (54, 'Establishment');
-insert into "UO" ("Id", "Name") values (55, 'Establishment');
-insert into "UO" ("Id", "Name") values (56, 'Establishment');
-insert into "UO" ("Id", "Name") values (57, 'Establishment');
-insert into "UO" ("Id", "Name") values (58, 'Establishment');
-insert into "UO" ("Id", "Name") values (59, 'Establishment');
-insert into "UO" ("Id", "Name") values (60, 'Establishment');
+insert into "UO" ("Id") values (21);
+insert into "UO" ("Id") values (22);
+insert into "UO" ("Id") values (23);
+insert into "UO" ("Id") values (24);
+insert into "UO" ("Id") values (25);
+insert into "UO" ("Id") values (26);
+insert into "UO" ("Id") values (27);
+insert into "UO" ("Id") values (28);
+insert into "UO" ("Id") values (29);
+insert into "UO" ("Id") values (30);
+insert into "UO" ("Id") values (31);
+insert into "UO" ("Id") values (32);
+insert into "UO" ("Id") values (33);
+insert into "UO" ("Id") values (34);
+insert into "UO" ("Id") values (35);
+insert into "UO" ("Id") values (36);
+insert into "UO" ("Id") values (37);
+insert into "UO" ("Id") values (38);
+insert into "UO" ("Id") values (39);
+insert into "UO" ("Id") values (40);
+insert into "UO" ("Id") values (41);
+insert into "UO" ("Id") values (42);
+insert into "UO" ("Id") values (43);
+insert into "UO" ("Id") values (44);
+insert into "UO" ("Id") values (45);
+insert into "UO" ("Id") values (46);
+insert into "UO" ("Id") values (47);
+insert into "UO" ("Id") values (48);
+insert into "UO" ("Id") values (49);
+insert into "UO" ("Id") values (50);
+insert into "UO" ("Id") values (51);
+insert into "UO" ("Id") values (52);
+insert into "UO" ("Id") values (53);
+insert into "UO" ("Id") values (54);
+insert into "UO" ("Id") values (55);
+insert into "UO" ("Id") values (56);
+insert into "UO" ("Id") values (57);
+insert into "UO" ("Id") values (58);
+insert into "UO" ("Id") values (59);
+insert into "UO" ("Id") values (60);
 
-insert into "UO" ("Id", "Name") values (61, 'Department');
-insert into "UO" ("Id", "Name") values (62, 'Department');
-insert into "UO" ("Id", "Name") values (63, 'Department');
-insert into "UO" ("Id", "Name") values (64, 'Department');
-insert into "UO" ("Id", "Name") values (65, 'Department');
-insert into "UO" ("Id", "Name") values (66, 'Department');
-insert into "UO" ("Id", "Name") values (67, 'Department');
-insert into "UO" ("Id", "Name") values (68, 'Department');
-insert into "UO" ("Id", "Name") values (69, 'Department');
-insert into "UO" ("Id", "Name") values (70, 'Department');
-insert into "UO" ("Id", "Name") values (71, 'Department');
-insert into "UO" ("Id", "Name") values (72, 'Department');
-insert into "UO" ("Id", "Name") values (73, 'Department');
-insert into "UO" ("Id", "Name") values (74, 'Department');
-insert into "UO" ("Id", "Name") values (75, 'Department');
-insert into "UO" ("Id", "Name") values (76, 'Department');
-insert into "UO" ("Id", "Name") values (77, 'Department');
-insert into "UO" ("Id", "Name") values (78, 'Department');
-insert into "UO" ("Id", "Name") values (79, 'Department');
-insert into "UO" ("Id", "Name") values (80, 'Department');
-insert into "UO" ("Id", "Name") values (81, 'Department');
-insert into "UO" ("Id", "Name") values (82, 'Department');
-insert into "UO" ("Id", "Name") values (83, 'Department');
-insert into "UO" ("Id", "Name") values (84, 'Department');
-insert into "UO" ("Id", "Name") values (85, 'Department');
-insert into "UO" ("Id", "Name") values (86, 'Department');
-insert into "UO" ("Id", "Name") values (87, 'Department');
-insert into "UO" ("Id", "Name") values (88, 'Department');
-insert into "UO" ("Id", "Name") values (89, 'Department');
-insert into "UO" ("Id", "Name") values (90, 'Department');
-insert into "UO" ("Id", "Name") values (91, 'Department');
-insert into "UO" ("Id", "Name") values (92, 'Department');
-insert into "UO" ("Id", "Name") values (93, 'Department');
-insert into "UO" ("Id", "Name") values (94, 'Department');
-insert into "UO" ("Id", "Name") values (95, 'Department');
-insert into "UO" ("Id", "Name") values (96, 'Department');
-insert into "UO" ("Id", "Name") values (97, 'Department');
-insert into "UO" ("Id", "Name") values (98, 'Department');
-insert into "UO" ("Id", "Name") values (99, 'Department');
-insert into "UO" ("Id", "Name") values (100, 'Department');
+insert into "UO" ("Id") values (61);
+insert into "UO" ("Id") values (62);
+insert into "UO" ("Id") values (63);
+insert into "UO" ("Id") values (64);
+insert into "UO" ("Id") values (65);
+insert into "UO" ("Id") values (66);
+insert into "UO" ("Id") values (67);
+insert into "UO" ("Id") values (68);
+insert into "UO" ("Id") values (69);
+insert into "UO" ("Id") values (70);
+insert into "UO" ("Id") values (71);
+insert into "UO" ("Id") values (72);
+insert into "UO" ("Id") values (73);
+insert into "UO" ("Id") values (74);
+insert into "UO" ("Id") values (75);
+insert into "UO" ("Id") values (76);
+insert into "UO" ("Id") values (77);
+insert into "UO" ("Id") values (78);
+insert into "UO" ("Id") values (79);
+insert into "UO" ("Id") values (80);
+insert into "UO" ("Id") values (81);
+insert into "UO" ("Id") values (82);
+insert into "UO" ("Id") values (83);
+insert into "UO" ("Id") values (84);
+insert into "UO" ("Id") values (85);
+insert into "UO" ("Id") values (86);
+insert into "UO" ("Id") values (87);
+insert into "UO" ("Id") values (88);
+insert into "UO" ("Id") values (89);
+insert into "UO" ("Id") values (90);
+insert into "UO" ("Id") values (91);
+insert into "UO" ("Id") values (92);
+insert into "UO" ("Id") values (93);
+insert into "UO" ("Id") values (94);
+insert into "UO" ("Id") values (95);
+insert into "UO" ("Id") values (96);
+insert into "UO" ("Id") values (97);
+insert into "UO" ("Id") values (98);
+insert into "UO" ("Id") values (99);
+insert into "UO" ("Id") values (100);
 
-insert into "UO" ("Id", "Name") values (101, 'Service');
-insert into "UO" ("Id", "Name") values (102, 'Service');
-insert into "UO" ("Id", "Name") values (103, 'Service');
-insert into "UO" ("Id", "Name") values (104, 'Service');
-insert into "UO" ("Id", "Name") values (105, 'Service');
-insert into "UO" ("Id", "Name") values (106, 'Service');
-insert into "UO" ("Id", "Name") values (107, 'Service');
-insert into "UO" ("Id", "Name") values (108, 'Service');
-insert into "UO" ("Id", "Name") values (109, 'Service');
-insert into "UO" ("Id", "Name") values (110, 'Service');
-insert into "UO" ("Id", "Name") values (111, 'Service');
-insert into "UO" ("Id", "Name") values (112, 'Service');
-insert into "UO" ("Id", "Name") values (113, 'Service');
-insert into "UO" ("Id", "Name") values (114, 'Service');
-insert into "UO" ("Id", "Name") values (115, 'Service');
-insert into "UO" ("Id", "Name") values (116, 'Service');
-insert into "UO" ("Id", "Name") values (117, 'Service');
-insert into "UO" ("Id", "Name") values (118, 'Service');
-insert into "UO" ("Id", "Name") values (119, 'Service');
-insert into "UO" ("Id", "Name") values (120, 'Service');
-insert into "UO" ("Id", "Name") values (121, 'Service');
-insert into "UO" ("Id", "Name") values (122, 'Service');
-insert into "UO" ("Id", "Name") values (123, 'Service');
-insert into "UO" ("Id", "Name") values (124, 'Service');
-insert into "UO" ("Id", "Name") values (125, 'Service');
-insert into "UO" ("Id", "Name") values (126, 'Service');
-insert into "UO" ("Id", "Name") values (127, 'Service');
-insert into "UO" ("Id", "Name") values (128, 'Service');
-insert into "UO" ("Id", "Name") values (129, 'Service');
-insert into "UO" ("Id", "Name") values (130, 'Service');
-insert into "UO" ("Id", "Name") values (131, 'Service');
-insert into "UO" ("Id", "Name") values (132, 'Service');
-insert into "UO" ("Id", "Name") values (133, 'Service');
-insert into "UO" ("Id", "Name") values (134, 'Service');
-insert into "UO" ("Id", "Name") values (135, 'Service');
-insert into "UO" ("Id", "Name") values (136, 'Service');
-insert into "UO" ("Id", "Name") values (137, 'Service');
-insert into "UO" ("Id", "Name") values (138, 'Service');
-insert into "UO" ("Id", "Name") values (139, 'Service');
-insert into "UO" ("Id", "Name") values (140, 'Service');
-insert into "UO" ("Id", "Name") values (141, 'Service');
-insert into "UO" ("Id", "Name") values (142, 'Service');
-insert into "UO" ("Id", "Name") values (143, 'Service');
-insert into "UO" ("Id", "Name") values (144, 'Service');
-insert into "UO" ("Id", "Name") values (145, 'Service');
-insert into "UO" ("Id", "Name") values (146, 'Service');
-insert into "UO" ("Id", "Name") values (147, 'Service');
-insert into "UO" ("Id", "Name") values (148, 'Service');
-insert into "UO" ("Id", "Name") values (149, 'Service');
-insert into "UO" ("Id", "Name") values (150, 'Service');
-insert into "UO" ("Id", "Name") values (151, 'Service');
-insert into "UO" ("Id", "Name") values (152, 'Service');
-insert into "UO" ("Id", "Name") values (153, 'Service');
-insert into "UO" ("Id", "Name") values (154, 'Service');
-insert into "UO" ("Id", "Name") values (155, 'Service');
-insert into "UO" ("Id", "Name") values (156, 'Service');
-insert into "UO" ("Id", "Name") values (157, 'Service');
-insert into "UO" ("Id", "Name") values (158, 'Service');
-insert into "UO" ("Id", "Name") values (159, 'Service');
-insert into "UO" ("Id", "Name") values (160, 'Service');
+insert into "UO" ("Id") values (101);
+insert into "UO" ("Id") values (102);
+insert into "UO" ("Id") values (103);
+insert into "UO" ("Id") values (104);
+insert into "UO" ("Id") values (105);
+insert into "UO" ("Id") values (106);
+insert into "UO" ("Id") values (107);
+insert into "UO" ("Id") values (108);
+insert into "UO" ("Id") values (109);
+insert into "UO" ("Id") values (110);
+insert into "UO" ("Id") values (111);
+insert into "UO" ("Id") values (112);
+insert into "UO" ("Id") values (113);
+insert into "UO" ("Id") values (114);
+insert into "UO" ("Id") values (115);
+insert into "UO" ("Id") values (116);
+insert into "UO" ("Id") values (117);
+insert into "UO" ("Id") values (118);
+insert into "UO" ("Id") values (119);
+insert into "UO" ("Id") values (120);
+insert into "UO" ("Id") values (121);
+insert into "UO" ("Id") values (122);
+insert into "UO" ("Id") values (123);
+insert into "UO" ("Id") values (124);
+insert into "UO" ("Id") values (125);
+insert into "UO" ("Id") values (126);
+insert into "UO" ("Id") values (127);
+insert into "UO" ("Id") values (128);
+insert into "UO" ("Id") values (129);
+insert into "UO" ("Id") values (130);
+insert into "UO" ("Id") values (131);
+insert into "UO" ("Id") values (132);
+insert into "UO" ("Id") values (133);
+insert into "UO" ("Id") values (134);
+insert into "UO" ("Id") values (135);
+insert into "UO" ("Id") values (136);
+insert into "UO" ("Id") values (137);
+insert into "UO" ("Id") values (138);
+insert into "UO" ("Id") values (139);
+insert into "UO" ("Id") values (140);
+insert into "UO" ("Id") values (141);
+insert into "UO" ("Id") values (142);
+insert into "UO" ("Id") values (143);
+insert into "UO" ("Id") values (144);
+insert into "UO" ("Id") values (145);
+insert into "UO" ("Id") values (146);
+insert into "UO" ("Id") values (147);
+insert into "UO" ("Id") values (148);
+insert into "UO" ("Id") values (149);
+insert into "UO" ("Id") values (150);
+insert into "UO" ("Id") values (151);
+insert into "UO" ("Id") values (152);
+insert into "UO" ("Id") values (153);
+insert into "UO" ("Id") values (154);
+insert into "UO" ("Id") values (155);
+insert into "UO" ("Id") values (156);
+insert into "UO" ("Id") values (157);
+insert into "UO" ("Id") values (158);
+insert into "UO" ("Id") values (159);
+insert into "UO" ("Id") values (160);
 
 /*-----------Region-----------------*/
 insert into "Region" ("Id", "Name") values (1, 'Jalisco');
@@ -261,9 +261,10 @@ insert into "Address" ("Id", "IdCity", "StreetName", "StreetNumber") values (39,
 insert into "Address" ("Id", "IdCity", "StreetName", "StreetNumber") values (40, 9, 'Rieder', '71528');
 
 /*-----------------Establishment--(40 rows)--------------------------*/
-/*healthcare establishment means a hospital, diagnostic centre, medical clinics, nursing home, maternity home, 
-dental clinic, homeopathy clinic, Tibb clinic, acupuncture, physiotherapy clinic or any other premises or conveyance–*/
-/*hospital, diagnostic centre, medical clinics, nursing home, maternity home, dental clinic, homeopathy clinic, acupuncture, physiotherapy clinic, Tibb clinic*/
+/*
+Establishment List : Healthcare establishment means a hospital, diagnostic centre, medical clinics, nursing home,
+maternity home, dental clinic, homeopathy clinic, Tibb clinic, acupuncture, physiotherapy clinic
+*/
 
 insert into "Establishment" ("Id", "IdAddress", "Name") values (21, 1, 'Tibb clinic');
 insert into "Establishment" ("Id", "IdAddress", "Name") values (22, 2, 'dental clinic');
@@ -307,9 +308,10 @@ insert into "Establishment" ("Id", "IdAddress", "Name") values (59, 39, 'physiot
 insert into "Establishment" ("Id", "IdAddress", "Name") values (60, 40, 'dental clinic');
 
 /*----------Department---------------------------------*/
-/* the dataset focus on departments of 8 establishments (4 hospital: IdEstablishment == 23,24,29,54 ; 4 medical clinics: IdEstablishment == 25,39,46,56)
-What are the departments in medical field?
-medicine, surgery, gynaecology, obstetrics, paediatrics, eye, ENT, dental, orthopaedics, neurology, cardiology, psychiatry, skin, V.D., plastic surgery, nuclear medicine, infectious disease
+/*
+This dataset focus on departments of 8 establishments (4 hospital: IdEstablishment == 23,24,29,54 ; 4 medical clinics: IdEstablishment == 25,39,46,56)
+Department List: Medicine, surgery, gynaecology, obstetrics, paediatrics, eye, ENT, dental, orthopaedics,
+neurology, cardiology, psychiatry, skin, V.D., plastic surgery, nuclear medicine, infectious disease
 */
 insert into "Department" ("Id", "IdEstablishment", "Name") values (61, 23, 'skin');
 insert into "Department" ("Id", "IdEstablishment", "Name") values (62, 23, 'V.D.');
@@ -353,13 +355,13 @@ insert into "Department" ("Id", "IdEstablishment", "Name") values (99, 56, 'card
 insert into "Department" ("Id", "IdEstablishment", "Name") values (100, 56, 'ENT');
 
 /*---------Service------------Every IdDepartment in (64,69,74,94,84,87) have 10 services. 6*10 = 60 rows---------------*/
-/* the dataset focus on services of 6 departments (IdDepartment == 64,69,74,94,84,87)
+/*
+This dataset focus on services of 6 departments (IdDepartment == 64,69,74,94,84,87)
 For department of gynaecology: IdDepartment == 64,69,74,94
 We can have services: Mental health care, Laboratory and diagnostic care, Prenatal care, Nutritional support, Pharmaceutical care
 
 For department of neurology : IdDepartment == 84,87
 We can have services: Mental health care,Laboratory and diagnostic care, Substance abuse treatment, Preventative care, Pharmaceutical care
-
 
 List of services : Mental health care, Dental care, Laboratory and diagnostic care, Substance abuse treatment, Preventative care, 
 Physical and occupational therapy, Nutritional support, Pharmaceutical care, Transportation, Prenatal care
@@ -425,30 +427,14 @@ insert into "Service" ("Id", "IdDepartment", "Name") values (158, 87, 'Substance
 insert into "Service" ("Id", "IdDepartment", "Name") values (159, 87, 'Preventative care');
 insert into "Service" ("Id", "IdDepartment", "Name") values (160, 87, 'Pharmaceutical care');
 
-/*---------------Permit--------10 rows----------------*/
+/*-----------------TypeECA-------11 rows ------------------*/
 /*
-Mental health care permit, Dental care permit, Laboratory and diagnostic care permit, Substance abuse treatment permit, 
-Preventative care permit, Physical and occupational therapy permit, Nutritional support permit, Pharmaceutical care permit, Transportation permit, Prenatal care permit
-*/
-insert into "Permit" ("Id", "Name") values (1, 'Mental health care permit');
-insert into "Permit" ("Id", "Name") values (2, 'Dental care permit');
-insert into "Permit" ("Id", "Name") values (3, 'Laboratory and diagnostic care permit');
-insert into "Permit" ("Id", "Name") values (4, 'Substance abuse treatment permit');
-insert into "Permit" ("Id", "Name") values (5, 'Preventative care permit');
-insert into "Permit" ("Id", "Name") values (6, 'Physical and occupational therapy permit');
-insert into "Permit" ("Id", "Name") values (7, 'Nutritional support permit');
-insert into "Permit" ("Id", "Name") values (8, 'Pharmaceutical care permit');
-insert into "Permit" ("Id", "Name") values (9, 'Transportation permit');
-insert into "Permit" ("Id", "Name") values (10, 'Prenatal care permit');
-
-/*-----------------TypeECA-------8 departments * 10 permits * 5 = 400 rows ------------------*/
-/* the dataset focus on ECA of 8 departments (4 hospital: IdEstablishment == 23,24,29,54 ; 4 medical clinics: IdEstablishment == 25,39,46,56)
-
-ECA list： Doctor, Surgeon, Dietician, Pharmacist, Anesthesiologist,Registered nurse, Physician assistant, Medical technologist, Respiratory therapist, Radiologic technician, Occupational therapist
+ECA list： Doctor, Surgeon, Dietitian, Pharmacist, Anesthesiologist,Registered nurse, Physician assistant,
+Medical technologist, Respiratory therapist, Radiologic technician, Occupational therapist
 */
 insert into "TypeECA" ("Id", "Name") values (1, 'Doctor');
 insert into "TypeECA" ("Id", "Name") values (2, 'Surgeon');
-insert into "TypeECA" ("Id", "Name") values (3, 'Dietician');
+insert into "TypeECA" ("Id", "Name") values (3, 'Dietitian');
 insert into "TypeECA" ("Id", "Name") values (4, 'Pharmacist');
 insert into "TypeECA" ("Id", "Name") values (5, 'Anesthesiologist');
 insert into "TypeECA" ("Id", "Name") values (6, 'Registered nurse');

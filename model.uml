@@ -3,70 +3,90 @@
   <ID>DATABASE</ID>
   <OriginalElement>9aa97f63-294c-437d-b504-45af18f8d716.SCHEMA:postgres.public</OriginalElement>
   <nodes>
-    <node x="400.21780303030323" y="320.0">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.UO</node>
-    <node x="152.84280303030323" y="130.0">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Region</node>
-    <node x="103.96696359784278" y="610.0">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Programme</node>
-    <node x="893.1778152285567" y="139.0">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Service</node>
-    <node x="989.5" y="653.0">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.ActivityPermit</node>
-    <node x="-51.65719696969677" y="45.0">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Address</node>
-    <node x="969.5838068181818" y="316.0">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Activity</node>
-    <node x="380.8276515151518" y="860.0">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Personnel</node>
-    <node x="1000.5838068181818" y="947.0">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Permit</node>
-    <node x="706.0027333718542" y="133.0">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Department</node>
-    <node x="551.8276515151517" y="133.0">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Establishment</node>
-    <node x="706.0027333718542" y="327.5">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.UOActivity</node>
-    <node x="693.5027333718542" y="462.50000000000006">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.NeedsPrevision</node>
-    <node x="393.2348484848485" y="577.0">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Affectation</node>
-    <node x="594.75" y="887.0">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.ECA</node>
-    <node x="152.84280303030323" y="272.0">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.City</node>
+    <node x="458.4469433688648" y="387.53010914565294">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.UO</node>
+    <node x="205.94473552152886" y="126.5">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Region</node>
+    <node x="199.44473552152886" y="589.3696838539706">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Programme</node>
+    <node x="944.3903508771931" y="116.0">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Service</node>
+    <node x="736.0700648403094" y="805.2055957081707">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.TypeECA</node>
+    <node x="966.3157746060067" y="376.03010914565294">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Activity</node>
+    <node x="-30.263080523498672" y="53.70836230488061">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Address</node>
+    <node x="424.4469433688648" y="556.0509032743695">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Assignment</node>
+    <node x="998.3157746060067" y="879.2610169491525">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Permit</node>
+    <node x="735.6951754385966" y="115.5">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Department</node>
+    <node x="560.0" y="115.5">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Establishment</node>
+    <node x="749.0700648403094" y="387.53010914565294">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.UOActivity</node>
+    <node x="724.0700648403094" y="507.2992096349267">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.NeedsPrevision</node>
+    <node x="435.9019492773258" y="824.5716974030861">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.ECA</node>
+    <node x="205.94473552152886" y="275.26440677966104">9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.City</node>
   </nodes>
   <notes />
   <edges>
     <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.NeedsPrevision" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.UO" relationship="REFERENCES">
-      <point x="-76.0" y="-3.0" />
-      <point x="479.21780303030323" y="531.0" />
-      <point x="15.0" y="38.5" />
+      <point x="-76.0" y="-51.248306360557194" />
+      <point x="540.947" y="538.5509032743695" />
+      <point x="40.50005663113518" y="27.0" />
     </edge>
     <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Address" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.City" relationship="REFERENCES">
-      <point x="-14.999803030303227" y="60.5" />
-      <point x="21.843000000000004" y="321.5" />
+      <point x="0.0" y="60.5" />
+      <point x="58.23691947650133" y="324.76440677966104" />
       <point x="-64.0" y="0.0" />
     </edge>
-    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.ActivityPermit" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Activity" relationship="REFERENCES">
-      <point x="10.58400000000006" y="-38.0" />
-      <point x="15.000193181818304" y="49.5" />
+    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Assignment" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.ECA" relationship="REFERENCES">
+      <point x="10.455005908460976" y="82.5" />
+      <point x="0.0" y="-71.5" />
+    </edge>
+    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Assignment" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.UO" relationship="REFERENCES">
+      <point x="0.0" y="-82.5" />
+      <point x="0.0" y="27.0" />
     </edge>
     <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Establishment" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Address" relationship="REFERENCES">
       <point x="0.0" y="-49.5" />
-      <point x="615.8276515151517" y="97.5" />
-      <point x="88.5" y="-8.0" />
+      <point x="624.0" y="98.0" />
+      <point x="88.5" y="-16.20836230488061" />
     </edge>
     <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.City" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Region" relationship="REFERENCES">
-      <point x="0.0" y="-49.5" />
+      <point x="6.5" y="-49.5" />
+      <point x="276.44473552152886" y="203.5" />
       <point x="0.0" y="38.5" />
     </edge>
-    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Personnel" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Address" relationship="REFERENCES">
-      <point x="-75.0" y="0.0" />
-      <point x="6.8430000000000035" y="942.5" />
-      <point x="-29.999803030303227" y="60.5" />
+    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.ECA" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.TypeECA" relationship="REFERENCES">
+      <point x="75.0" y="-52.366101694915415" />
+      <point x="-64.0" y="0.0" />
     </edge>
-    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Personnel" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.ECA" relationship="REFERENCES">
-      <point x="74.99999999999994" y="-17.0" />
-      <point x="-53.0" y="0.0" />
+    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.NeedsPrevision" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.TypeECA" relationship="REFERENCES">
+      <point x="0.0" y="82.5" />
+      <point x="0.0" y="-38.5" />
+    </edge>
+    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Permit" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Activity" relationship="REFERENCES">
+      <point x="-30.999774606006667" y="-38.0" />
+      <point x="-14.999774606006667" y="49.5" />
     </edge>
     <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.NeedsPrevision" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Activity" relationship="REFERENCES">
       <point x="76.0" y="0.0" />
-      <point x="1049.0838068181818" y="534.0" />
-      <point x="0.0" y="49.5" />
+      <point x="1015.816" y="589.7992096349267" />
+      <point x="-29.999774606006667" y="49.5" />
     </edge>
-    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Personnel" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Permit" relationship="REFERENCES">
-      <point x="74.99999999999994" y="43.0" />
-      <point x="-64.0" y="0.0" />
+    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.ECA" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Address" relationship="REFERENCES">
+      <point x="-75.0" y="0.0" />
+      <point x="43.23691947650133" y="896.0716974030861" />
+      <point x="-15.0" y="60.5" />
+    </edge>
+    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Permit" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.ECA" relationship="REFERENCES">
+      <point x="-63.5" y="0.0" />
+      <point x="75.0" y="21.189319546066372" />
     </edge>
     <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Establishment" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.UO" relationship="REFERENCES">
-      <point x="-64.0" y="1.0" />
-      <point x="494.218" y="183.5" />
-      <point x="30.000196969696788" y="-38.5" />
+      <point x="64.0" y="0.0" />
+      <point x="712.0" y="165.0" />
+      <point x="712.0" y="242.0" />
+      <point x="500.447" y="242.0" />
+      <point x="5.6631135180396086E-5" y="-27.00010914565297" />
+    </edge>
+    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Service" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.UO" relationship="REFERENCES">
+      <point x="-3.5087719322746125E-4" y="49.5" />
+      <point x="1020.8899999999999" y="336.5" />
+      <point x="485.447" y="336.5" />
+      <point x="-14.99994336886482" y="-27.0" />
     </edge>
     <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.UOActivity" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Activity" relationship="REFERENCES">
       <point x="63.5" y="0.0" />
@@ -74,43 +94,25 @@
     </edge>
     <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Region" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.UO" relationship="REFERENCES">
       <point x="64.0" y="0.0" />
-      <point x="419.218" y="168.5" />
-      <point x="-44.99980303030321" y="-38.5" />
-    </edge>
-    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Service" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.UO" relationship="REFERENCES">
-      <point x="15.000196969696844" y="49.5" />
-      <point x="984.6780121982536" y="294.0" />
-      <point x="479.218" y="294.0" />
-      <point x="15.000196969696788" y="-38.5" />
-    </edge>
-    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Affectation" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.UO" relationship="REFERENCES">
-      <point x="-5.0170454545452685" y="-82.5" />
-      <point x="0.0" y="38.5" />
+      <point x="470.447" y="165.0" />
+      <point x="-29.99994336886482" y="-27.0" />
     </edge>
     <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.UOActivity" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.UO" relationship="REFERENCES">
-      <point x="-63.5" y="-7.0" />
-      <point x="64.0" y="0.0" />
+      <point x="-63.5" y="-11.0" />
+      <point x="42.0" y="0.0" />
     </edge>
-    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Affectation" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Programme" relationship="REFERENCES">
-      <point x="-76.0" y="0.0" />
+    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Assignment" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Programme" relationship="REFERENCES">
+      <point x="-76.0" y="0.3187805796011389" />
       <point x="70.5" y="0.0" />
     </edge>
-    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.ActivityPermit" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Permit" relationship="REFERENCES">
-      <point x="11.083806818181756" y="38.0" />
-      <point x="0.0" y="-38.5" />
-    </edge>
     <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Department" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.UO" relationship="REFERENCES">
-      <point x="0.0" y="-49.5" />
-      <point x="786.5027333718542" y="27.5" />
-      <point x="449.218" y="27.5" />
-      <point x="-14.999803030303212" y="-38.5" />
-    </edge>
-    <edge source="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Affectation" target="9aa97f63-294c-437d-b504-45af18f8d716.TABLE:postgres.public.Personnel" relationship="REFERENCES">
-      <point x="-13.407196969696713" y="82.5" />
-      <point x="0.0" y="-82.5" />
+      <point x="0.0" y="49.5" />
+      <point x="816.1951754385966" y="321.5" />
+      <point x="515.447" y="321.5" />
+      <point x="15.00005663113518" y="-27.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic" zoom="0.856727976766699" showDependencies="false" x="538.5" y="518.5" />
+  <settings layout="Hierarchic" zoom="0.946524064171123" showDependencies="false" x="547.5" y="510.5" />
   <SelectedNodes />
   <Categories>
     <Category>Columns</Category>

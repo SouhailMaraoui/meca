@@ -48,22 +48,6 @@ insert into "UOActivity" ("IdActivity", "IdUO") values (10, 156);
 insert into "UOActivity" ("IdActivity", "IdUO") values (10, 155);
 insert into "UOActivity" ("IdActivity", "IdUO") values (10, 154);
 
-/*------------ActivityPermit----------------------*/
-/* the dataset focus on activities of two departments: gynaecology and neurology
-Activity list:
-*/
-insert into "ActivityPermit" ("IdActivity", "IdPermit") values (1, 3);
-insert into "ActivityPermit" ("IdActivity", "IdPermit") values (2, 3);
-insert into "ActivityPermit" ("IdActivity", "IdPermit") values (3, 3);
-insert into "ActivityPermit" ("IdActivity", "IdPermit") values (4, 3);
-insert into "ActivityPermit" ("IdActivity", "IdPermit") values (5, 3);
-insert into "ActivityPermit" ("IdActivity", "IdPermit") values (6, 3);
-insert into "ActivityPermit" ("IdActivity", "IdPermit") values (7, 6);
-insert into "ActivityPermit" ("IdActivity", "IdPermit") values (8, 1);
-insert into "ActivityPermit" ("IdActivity", "IdPermit") values (9, 3);
-insert into "ActivityPermit" ("IdActivity", "IdPermit") values (10, 3);
-
-
 /*------------NeedsPrevision----------------------*/
 /* ActivityId and  UOId are consistent with table UOActivity */
 insert into "NeedsPrevision" ("Id", "IdUO", "IdActivity", "IdTypeECA", "WorkQuantity", "DateRange") values (1, 23, 1, 1, 5, '[2022-05-27,2022-06-27]');
