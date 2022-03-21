@@ -62,3 +62,23 @@ join "Region" as reg ON reg."Id" = uo."Id"
 join "City" as cit ON cit."IdRegion" = reg."Id"
 JOIN "Address" as addr ON addr."IdCity" = cit."Id"
 
+
+//Tous les activités avec son permit approprié
+
+select act."Name" as nameActivity,perm."Name" as namepermit from "ActivityPermit" as actperm 
+join "Activity" as act ON act."Id" = actperm."IdActivity"
+join "Permit" as perm ON perm."Id" = actperm."IdPermit"
+
+
+// Tous les besoins prevision par Establishment
+
+select act."Name" as  nameActivity ,esth."Name" as nameEsthablssment,addr."StreetName"
+,cit."Name" as nameCity,reg."Name" as nameregion ,needprev."WorkQuantity",needprev."DateRange"
+from "NeedsPrevision" as needprev 
+join "UO" as uo ON uo."Id" = needprev."IdUO"
+join "Activity" as act ON act."Id" = needprev."IdActivity"
+join "UOActivity" as uoact ON uoact."IdActivity" = act."Id"
+join "Establishment" as esth ON esth."Id" = uo."Id"
+JOIN "Address" as addr ON addr."Id" = esth."IdAddress"
+join "City" as cit ON cit."Id" = addr."IdCity"
+join "Region" as reg ON reg."Id" = cit."IdRegion"
