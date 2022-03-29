@@ -1,9 +1,6 @@
 DROP TABLE IF EXISTS "Activity" CASCADE
 ;
 
-DROP TABLE IF EXISTS "TypeActivity" CASCADE
-;
-
 DROP TABLE IF EXISTS "Address" CASCADE
 ;
 
@@ -16,13 +13,10 @@ DROP TABLE IF EXISTS "City" CASCADE
 DROP TABLE IF EXISTS "Department" CASCADE
 ;
 
-DROP TABLE IF EXISTS "TypeECA" CASCADE
-;
-
 DROP TABLE IF EXISTS "Establishment" CASCADE
 ;
 
-DROP TABLE IF EXISTS "NeedsPrevision" CASCADE
+DROP TABLE IF EXISTS "ActivityPrevision" CASCADE
 ;
 
 DROP TABLE IF EXISTS "Permit" CASCADE
@@ -46,11 +40,23 @@ DROP TABLE IF EXISTS "UO" CASCADE
 DROP TABLE IF EXISTS "UOActivity" CASCADE
 ;
 
+DROP TABLE IF EXISTS "ActivityWorkUnit" CASCADE
+;
+
 CREATE TABLE "Activity"
 (
 	"Id" integer NOT NULL,
+	"IdWorkUnit" integer NOT NULL,
 	"Name" varchar(50) NOT NULL,
 	"Description" varchar(50) NOT NULL
+)
+;
+
+
+CREATE TABLE "ActivityWorkUnit"
+(
+	"Id" integer NOT NULL,
+	"Name" varchar(50) NOT NULL
 )
 ;
 
@@ -74,10 +80,11 @@ CREATE TABLE "Assignment"
 (
 	"Id" integer NOT NULL,
 	"IdECA" integer NOT NULL,
-	"IdProgramme" integer NOT NULL,
 	"IdUO" integer NOT NULL,
 	"DateRange" daterange NOT NULL,
-	"WorkQuantity" integer NOT NULL
+	"IdActivity" integer NOT NULL,
+	"WorkQuantity" integer NOT NULL,
+	"IdProgramme" integer NOT NULL
 )
 ;
 
@@ -92,32 +99,22 @@ CREATE TABLE "City"
 CREATE TABLE "Department"
 (
 	"Id" integer NOT NULL,
-	"IdEstablishment" integer NOT NULL,
-	"Name" varchar(50) NOT NULL
-)
-;
-
-CREATE TABLE "TypeECA"
-(
-	"Id" integer NOT NULL,
-	"Name" varchar(50) NOT NULL
+	"IdEstablishment" integer NOT NULL
 )
 ;
 
 CREATE TABLE "Establishment"
 (
 	"Id" integer NOT NULL,
-	"IdAddress" integer NOT NULL,
-	"Name" varchar(50) NOT NULL
+	"IdAddress" integer NOT NULL
 )
 ;
 
-CREATE TABLE "NeedsPrevision"
+CREATE TABLE "ActivityPrevision"
 (
 	"Id" integer NOT NULL,
 	"IdUO" integer NOT NULL,
 	"IdActivity" integer NOT NULL,
-	"IdTypeECA" integer NOT NULL,
 	"WorkQuantity" integer NOT NULL,
 	"DateRange" daterange NOT NULL
 )
@@ -126,7 +123,6 @@ CREATE TABLE "NeedsPrevision"
 CREATE TABLE "ECA"
 (
 	"Id" integer NOT NULL,
-	"IdTypeECA" integer NOT NULL,
 	"Lastname" varchar(50) NOT NULL,
 	"Firstname" varchar(50) NOT NULL,
 	"IdAddress" integer NOT NULL
@@ -143,22 +139,21 @@ CREATE TABLE "Programme"
 
 CREATE TABLE "Region"
 (
-	"Id" integer NOT NULL,
-	"Name" varchar(50) NOT NULL
+	"Id" integer NOT NULL
 )
 ;
 
 CREATE TABLE "Service"
 (
 	"Id" integer NOT NULL,
-	"IdDepartment" integer NOT NULL,
-	"Name" varchar(50) NOT NULL
+	"IdDepartment" integer NOT NULL
 )
 ;
 
 CREATE TABLE "UO"
 (
-	"Id" integer NOT NULL
+	"Id" integer NOT NULL,
+	"Name" varchar(50) NOT NULL
 )
 ;
 
@@ -170,6 +165,10 @@ CREATE TABLE "UOActivity"
 ;
 
 ALTER TABLE "Activity" ADD CONSTRAINT "PK_Activity"
+	PRIMARY KEY ("Id")
+;
+
+ALTER TABLE "ActivityWorkUnit" ADD CONSTRAINT "PK_ActivityWorkUnit"
 	PRIMARY KEY ("Id")
 ;
 
@@ -193,15 +192,11 @@ ALTER TABLE "Department" ADD CONSTRAINT "PK_Department"
 	PRIMARY KEY ("Id")
 ;
 
-ALTER TABLE "TypeECA" ADD CONSTRAINT "PK_TypeECA"
-	PRIMARY KEY ("Id")
-;
-
 ALTER TABLE "Establishment" ADD CONSTRAINT "PK_Establishment"
 	PRIMARY KEY ("Id")
 ;
 
-ALTER TABLE "NeedsPrevision" ADD CONSTRAINT "PK_NeedsPrevision"
+ALTER TABLE "ActivityPrevision" ADD CONSTRAINT "PK_ActivityPrevision"
 	PRIMARY KEY ("Id")
 ;
 
@@ -229,6 +224,10 @@ ALTER TABLE "UOActivity" ADD CONSTRAINT "PK_UOActivity"
 	PRIMARY KEY ("IdActivity","IdUO")
 ;
 
+ALTER TABLE "Activity" ADD CONSTRAINT "FK_Activity_WorkUnit"
+	FOREIGN KEY ("IdWorkUnit") REFERENCES "ActivityWorkUnit" ("Id") ON DELETE No Action ON UPDATE No Action
+;
+
 ALTER TABLE "Permit" ADD CONSTRAINT "FK_Permit_ECA"
 	FOREIGN KEY ("IdECA") REFERENCES "ECA" ("Id") ON DELETE No Action ON UPDATE No Action
 ;
@@ -237,7 +236,7 @@ ALTER TABLE "Permit" ADD CONSTRAINT "FK_Permit_Activity"
 	FOREIGN KEY ("IdActivity") REFERENCES "Activity" ("Id") ON DELETE No Action ON UPDATE No Action
 ;
 
-ALTER TABLE "Assignment" ADD CONSTRAINT "FK_Assignment_Activity"
+ALTER TABLE "Assignment" ADD CONSTRAINT "FK_Assignment_UO"
 	FOREIGN KEY ("IdUO") REFERENCES "UO" ("Id") ON DELETE No Action ON UPDATE No Action
 ;
 
@@ -249,20 +248,16 @@ ALTER TABLE "Assignment" ADD CONSTRAINT "FK_Assignment_Programme"
 	FOREIGN KEY ("IdProgramme") REFERENCES "Programme" ("Id") ON DELETE No Action ON UPDATE No Action
 ;
 
-ALTER TABLE "NeedsPrevision" ADD CONSTRAINT "FK_NeedsPrevision_UO"
-	FOREIGN KEY ("IdUO") REFERENCES "UO" ("Id") ON DELETE No Action ON UPDATE No Action
-;
-
-ALTER TABLE "NeedsPrevision" ADD CONSTRAINT "FK_NeedsPrevision_Activity"
+ALTER TABLE "Assignment" ADD CONSTRAINT "FK_Assignment_Activity"
 	FOREIGN KEY ("IdActivity") REFERENCES "Activity" ("Id") ON DELETE No Action ON UPDATE No Action
 ;
 
-ALTER TABLE "NeedsPrevision" ADD CONSTRAINT "FK_NeedsPrevision_TypeECA"
-	FOREIGN KEY ("IdTypeECA") REFERENCES "TypeECA" ("Id") ON DELETE No Action ON UPDATE No Action
+ALTER TABLE "ActivityPrevision" ADD CONSTRAINT "FK_ActivityPrevision_UO"
+	FOREIGN KEY ("IdUO") REFERENCES "UO" ("Id") ON DELETE No Action ON UPDATE No Action
 ;
 
-ALTER TABLE "ECA" ADD CONSTRAINT "FK_TypeECA"
-	FOREIGN KEY ("IdTypeECA") REFERENCES "TypeECA" ("Id") ON DELETE No Action ON UPDATE No Action
+ALTER TABLE "ActivityPrevision" ADD CONSTRAINT "FK_ActivityPrevision_Activity"
+	FOREIGN KEY ("IdActivity") REFERENCES "Activity" ("Id") ON DELETE No Action ON UPDATE No Action
 ;
 
 ALTER TABLE "ECA" ADD CONSTRAINT "FK_ECA_Address"
