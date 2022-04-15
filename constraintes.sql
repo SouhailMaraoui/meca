@@ -93,3 +93,11 @@ select create_assignment(1,1,1,'[2022-04-14,2022-04-20]',25)
 
 /*check  FUNCTION create assigment */
 select * from "Assignment"
+
+/* add extension for  btree_gist */
+ CREATE EXTENSION btree_gist
+
+/* add constraint for  Assignment to add ECA availability check */
+ALTER TABLE "Assignment"
+  ADD CONSTRAINT recurring_eca_period_excl EXCLUDE USING GIST ("IdECA" WITH = ,"DateRange" WITH &&)
+
