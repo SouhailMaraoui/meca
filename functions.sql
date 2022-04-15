@@ -27,3 +27,16 @@ BEGIN
         WHERE Department."Id"=depId;
 END;$$;
 
+/*FUNCTION create publish_program */
+ CREATE OR REPLACE FUNCTION publish_program(Id integer)
+  RETURNS TABLE (Id VARCHAR(40)) AS 
+  $BODY$
+    UPDATE "Program"
+        SET "IsPublished"      = true
+        WHERE "Program"."Id" = Id
+    returning "Program"."Id";
+  $BODY$
+    LANGUAGE SQL
+    
+/*TEST FUNCTION create publish_program */
+select publish_program(1)
