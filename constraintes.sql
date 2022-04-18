@@ -30,10 +30,14 @@ insert into "Activity"
 values (2, '2022-04-13T15:20:35.651Z', 1, '2022-04-13T15:20:35.651Z','psychological','2022-04-13T15:20:35.651Z','Desc','2022-04-13T15:20:35.651Z');
 
 
+
 insert into "UOActivity" 
 ("Id", "IdActivity", "IdUO", "Since") 
 values (1, 1, 2,'2022-04-13T15:20:35.651Z');
 
+insert into "UOActivity" 
+("Id", "IdActivity", "IdUO", "Since") 
+values (3, 2, 2,'2022-04-13T15:20:35.651Z');
 
 insert into "ECA" 
 ("Id", "Since", "Lastname", "Lastname_since","Firstname","Firstname_since") 
@@ -92,6 +96,24 @@ CREATE SEQUENCE assignment_id_seq
   $BODY$
     LANGUAGE SQL
 
+/*FUNCTION check_eca_can_assigned_dates to determine whether or not we can assigned on certain dates
+FALSE : chevauchement de date
+TRUE : en dehors de la date
+ */
+  CREATE OR REPLACE FUNCTION check_eca_can_assigned_dates(daterange)
+  RETURNS boolean
+  AS $$
+      SELECT NOT EXISTS (
+          SELECT 1
+          FROM travels
+          WHERE travels.travel_dates && $1
+      LIMIT 1
+  );
+  $$ LANGUAGE SQL STABLE;
+
+/*TEST FUNCTION check_eca_can_assigned_dates */
+SELECT check_eca_can_assigned_dates(daterange('2018-03-09', '2018-03-11', '[]'));
+
 /*TEST FUNCTION create assigment */
 select create_assignment(1,1,1,'[2022-04-14,2022-04-20]',25)
 
@@ -131,3 +153,19 @@ select create_prevision(1, 1, 66, '[2022-04-14,2022-04-20]')
 
 /*check  FUNCTION create prevision */
 select * from "Prevision"
+
+
+select eca."Firstname",eca."Lastname",uoact."Id" as uoActivityId,prog."Id" as idProgramme,prog."Name" as nommProgramme,prog."DateRange" as dateProgramme,
+assign."DateRange" as dateAssignement
+,uo."Name" as nomUO,activ."Name",activ."Description",assign."WorkQuantity" as workQteAssignation
+,prev."WorkQuantity" as workQtePrevision
+
+from "Prevision" as prev
+join "Program" as prog on prog."Id" = prev."IdProgram"
+join "UOActivity" as uoact ON uoact."Id" = prev."IdUOActivity"
+join "Assignment"  as assign ON assign."IdUOActivity"= uoact."Id"
+join "Activity" as activ ON activ."Id" = uoact."IdActivity"
+join "UO" as uo ON uo."Id" = uoact."IdUO"
+join "ECA" as eca ON eca."Id" = assign."IdECA"
+where uo."Id"=2
+
