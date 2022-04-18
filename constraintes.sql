@@ -68,6 +68,10 @@ insert into "Assignment"
 values (1, '2022-04-13T15:20:35.651Z', 1,'2022-04-13T15:20:35.651Z',1,'2022-04-13T15:20:35.651Z',1,'2022-04-13T15:20:35.651Z','[2022-05-27,2022-06-27]','2022-04-13T15:20:35.651Z',15,'2022-04-13T15:20:35.651Z');
 
 
+insert into "Prevision" 
+("Id", "Since", "IdProgram","IdProgram_since","IdUOActivity","IdUOActivity_since","WorkQuantity","WorkQuantity_since","DateRange","DateRange_since") 
+values (1, '2022-04-13T15:20:35.651Z', 1,'2022-04-13T15:20:35.651Z',1,'2022-04-13T15:20:35.651Z',41,'2022-04-13T15:20:35.651Z','[2022-05-27,2022-06-27]','2022-04-13T15:20:35.651Z');
+
 
 /*FUNCTION create SEQUENCE assigment */
 CREATE SEQUENCE assignment_id_seq
@@ -101,3 +105,29 @@ select * from "Assignment"
 ALTER TABLE "Assignment"
   ADD CONSTRAINT recurring_eca_period_excl EXCLUDE USING GIST ("IdECA" WITH = ,"DateRange" WITH &&)
 
+
+
+/*FUNCTION create SEQUENCE prevision */
+CREATE SEQUENCE prevision_id_seq
+  START WITH 1
+  INCREMENT BY 1
+  MINVALUE 1
+  NO MAXVALUE
+  CACHE 1;
+
+/*FUNCTION create prevision */
+ CREATE OR REPLACE FUNCTION create_prevision(IdProgram integer,IdUOActivity integer,WorkQuantity integer,DateRange daterange)
+  RETURNS TABLE (Id VARCHAR(40)) AS 
+  $BODY$
+    insert into "Prevision" 
+    ("Id", "Since", "IdProgram","IdProgram_since","IdUOActivity","IdUOActivity_since","WorkQuantity","WorkQuantity_since","DateRange","DateRange_since") 
+    values (nextval('assignment_id_seq'), now(), IdProgram,now(),IdUOActivity,now(),WorkQuantity,now(),DateRange,now())
+    returning "Prevision"."Id";
+  $BODY$
+    LANGUAGE SQL
+    
+/*TEST FUNCTION create prevision */
+select create_prevision(1, 1, 66, '[2022-04-14,2022-04-20]')
+
+/*check  FUNCTION create prevision */
+select * from "Prevision"
