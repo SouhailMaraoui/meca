@@ -1,3 +1,27 @@
+DROP TABLE IF EXISTS  "Assignment";
+DROP TABLE IF EXISTS  "Assignment_During";
+DROP TABLE IF EXISTS  "Prevision";
+DROP TABLE IF EXISTS  "Prevision_During";
+
+DROP TABLE IF EXISTS  "Program";
+
+DROP TABLE IF EXISTS  "PermitActivity";
+DROP TABLE IF EXISTS  "PermitECA";
+DROP TABLE IF EXISTS  "Permit";
+
+DROP TABLE IF EXISTS  "ECA";
+
+DROP TABLE IF EXISTS  "UOActivity";
+DROP TABLE IF EXISTS  "UOActivity_During";
+
+DROP TABLE IF EXISTS  "Activity";
+DROP TABLE IF EXISTS  "ActivityWorkUnit";
+
+DROP TABLE IF EXISTS  "UO";
+DROP TABLE IF EXISTS  "UO_During";
+DROP TABLE IF EXISTS  "Hierarchy";
+
+
 CREATE TABLE "Hierarchy" (
 	"Id" integer NOT NULL PRIMARY KEY,
 	"Name" varchar(50) NOT NULL
@@ -15,72 +39,12 @@ CREATE TABLE "UO"(
 );
 
 CREATE TABLE "UO_During"(
-	"Id" integer NOT NULL PRIMARY KEY,
+	"Id" integer NOT NULL,
 	"Name" varchar(50) NOT NULL,
 	"IdParent" integer NOT NULL,
 	"IdHierarchical" integer NOT NULL REFERENCES "Hierarchy"("Id"),
 	"During" daterange NOT NULL
 );
-
-/*CREATE TABLE "UO_Parent"(
-	"Id" integer NOT NULL PRIMARY KEY REFERENCES "UO"("Id"),
-	"IdParent" integer NOT NULL REFERENCES "UO"("Id")
-	"IdParent" date NOT NULL,
-);
-CREATE TABLE "UO_Parent_during"(
-	"Id" integer NOT NULL PRIMARY KEY REFERENCES "UO_During"("Id"),
-	"IdParent" integer NOT NULL REFERENCES "UO"("Id")
-);
-CREATE TABLE "UO_Parent_historic"(
-	"Id" integer NOT NULL PRIMARY KEY REFERENCES "UO_During"("Id"),
-	"IdParent" integer NOT NULL REFERENCES "UO_During"("Id")
-);*/
-
-
-/*CREATE TABLE "Region"(
-	"Id" integer NOT NULL PRIMARY KEY REFERENCES "UO"("Id"),
-	"Since" date NOT NULL
-);
-CREATE TABLE "Region_During"(
-	"Id" integer NOT NULL PRIMARY KEY REFERENCES "UO_During"("Id"),
-	"Since" date NOT NULL
-);
-
-CREATE TABLE "Establishment"(
-	"Id" integer NOT NULL PRIMARY KEY REFERENCES "UO"("Id"),
-	"IdRegion" integer NOT NULL REFERENCES "UO"("Id"),
-	"Since" date NOT NULL
-);
-CREATE TABLE "Establishment_During"(
-	"Id" integer NOT NULL PRIMARY KEY REFERENCES "UO_During"("Id"),
-	"IdRegion" integer NOT NULL REFERENCES "UO_During"("Id"),
-	"During" daterange NOT NULL
-);
-
-CREATE TABLE "Department"(
-	"Id" integer NOT NULL PRIMARY KEY REFERENCES "UO"("Id"),
-	"IdEstablishment" integer NOT NULL REFERENCES "UO"("Id"),
-	"Since" date NOT NULL
-);
-CREATE TABLE "Department_During"(
-	"Id" integer NOT NULL PRIMARY KEY REFERENCES "UO_During"("Id"),
-	"IdEstablishment" integer NOT NULL REFERENCES "UO_During"("Id"),
-	"During" daterange NOT NULL
-);
-
-CREATE TABLE "Service"(
-	"Id" integer NOT NULL PRIMARY KEY REFERENCES "UO"("Id"),
-	"IdDepartment" integer NOT NULL REFERENCES "UO"("Id"),
-	"Since" date NOT NULL
-);
-CREATE TABLE "Service_During"(
-	"Id" integer NOT NULL PRIMARY KEY REFERENCES "UO_During"("Id"),
-	"IdDepartment" integer NOT NULL REFERENCES "UO_During"("Id"),
-	"During" daterange NOT NULL
-);
-*/
-
-
 
 
 
@@ -103,20 +67,17 @@ CREATE TABLE "Activity"(
 );
 
 
-
 CREATE TABLE "UOActivity"(
-    "Id" integer NOT NULL PRIMARY KEY,
 	"IdActivity" integer NOT NULL REFERENCES "Activity"("Id"),
 	"IdUO" integer NOT NULL REFERENCES "UO"("Id"),
-	"Since" date NOT NULL
+	"Since" date NOT NULL,
+	PRIMARY KEY("IdActivity", "IdUO")
 );
 CREATE TABLE "UOActivity_During"(
-    "Id" integer NOT NULL PRIMARY KEY,
 	"IdActivity" integer NOT NULL REFERENCES "Activity"("Id"),
-	"IdUO" integer NOT NULL REFERENCES "UO_During"("Id"),
+	"IdUO" integer NOT NULL,
 	"During" daterange NOT NULL
 );
-
 
 CREATE TABLE "ECA"(
 	"Id" integer NOT NULL PRIMARY KEY,
@@ -160,30 +121,25 @@ CREATE TABLE "Prevision"(
 	"Since" date NOT NULL,
 	"IdProgram" integer NOT NULL REFERENCES "Program"("Id"),
 	"IdProgram_since" date NOT NULL,
-	"IdUOActivity" integer NOT NULL REFERENCES "UOActivity"("Id"),
-	"IdUOActivity_since" date NOT NULL,
+	"IdUO" integer NOT NULL,
+	"IdUO_since" date NOT NULL,
+	"IdActivity" integer NOT NULL,
+	"IdActivity_since" date NOT NULL,
 	"WorkQuantity" integer NOT NULL,
 	"WorkQuantity_since" date NOT NULL,
 	"DateRange" daterange NOT NULL,
-	"DateRange_since" date NOT NULL
+	"DateRange_since" date NOT NULL,
+	FOREIGN KEY ("IdUO", "IdActivity") REFERENCES "UOActivity" ("IdUO", "IdActivity")
 );
 CREATE TABLE "Prevision_During"(
-	"Id" integer NOT NULL PRIMARY KEY,
+	"Id" integer NOT NULL,
 	"IdProgram" integer NOT NULL REFERENCES "Program"("Id"),
-	"IdUOActivity" integer NOT NULL REFERENCES "UOActivity"("Id"),
+	"IdUO" integer NOT NULL,
+	"IdActivity" integer NOT NULL  REFERENCES "Activity"("Id"),
 	"WorkQuantity" integer NOT NULL,
 	"DateRange" daterange NOT NULL,
 	"During" daterange NOT NULL
 );
-CREATE TABLE "Prevision_Historic"(
-	"Id" integer NOT NULL PRIMARY KEY,
-	"IdProgram" integer NOT NULL REFERENCES "Program"("Id"),
-	"IdUOActivity" integer NOT NULL REFERENCES "UOActivity_During"("Id"),
-	"WorkQuantity" integer NOT NULL,
-	"DateRange" daterange NOT NULL,
-	"During" daterange NOT NULL
-);
-
 
 
 CREATE TABLE "Assignment"(
@@ -191,28 +147,24 @@ CREATE TABLE "Assignment"(
 	"Since" date NOT NULL,
 	"IdECA" integer NOT NULL REFERENCES "ECA"("Id"),
 	"IdECA_since" date NOT NULL,
-	"IdUOActivity" integer NOT NULL REFERENCES "UOActivity"("Id"),
-	"IdUOActivity_since" date NOT NULL,
+	"IdUO" integer NOT NULL,
+	"IdUO_since" date NOT NULL,
+	"IdActivity" integer NOT NULL,
+	"IdActivity_since" date NOT NULL,
 	"IdProgram" integer NOT NULL REFERENCES "Program"("Id"),
 	"IdProgram_since" date NOT NULL,
 	"DateRange" daterange NOT NULL,
 	"DateRange_since" date NOT NULL,
 	"WorkQuantity" integer NOT NULL,
-	"WorkQuantity_since" date NOT NULL
+	"WorkQuantity_since" date NOT NULL,
+	FOREIGN KEY ("IdUO", "IdActivity") REFERENCES "UOActivity" ("IdUO", "IdActivity")
 );
+
 CREATE TABLE "Assignment_During"(
-	"Id" integer NOT NULL PRIMARY KEY,
+	"Id" integer NOT NULL,
 	"IdECA" integer NOT NULL REFERENCES "ECA"("Id"),
-	"IdUOActivity" integer NOT NULL REFERENCES "UOActivity"("Id"),
-	"IdProgram" integer NOT NULL REFERENCES "Program"("Id"),
-	"DateRange" daterange NOT NULL,
-	"WorkQuantity" integer NOT NULL,
-	"During" daterange NOT NULL
-);
-CREATE TABLE "Assignment_Historic"(
-	"Id" integer NOT NULL PRIMARY KEY,
-	"IdECA" integer NOT NULL REFERENCES "ECA"("Id"),
-	"IdUOActivity" integer NOT NULL REFERENCES "UOActivity_During"("Id"),
+	"IdUO" integer NOT NULL,
+	"IdActivity" integer NOT NULL REFERENCES "Activity"("Id"),
 	"IdProgram" integer NOT NULL REFERENCES "Program"("Id"),
 	"DateRange" daterange NOT NULL,
 	"WorkQuantity" integer NOT NULL,
