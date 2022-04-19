@@ -1,3 +1,2 @@
-# meca model
+# MECA Project
 
-![model](./model.png)

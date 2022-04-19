@@ -1,6 +1,9 @@
 CREATE EXTENSION IF NOT EXISTS btree_gist;
 
 
+/*Since we are using daterange, there will be issues in relation to uniqueness if we update the same thing two time
+  in the same day, we can solve this by having timerange but it's not offered by default in Postgres*/
+
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*---------------------------------------------------------UO---------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------*/
