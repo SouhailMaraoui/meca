@@ -31,13 +31,12 @@ BEGIN
 END;$$ LANGUAGE plpgsql;
 
 /*--------------------------------------------------------------------------------------------------------------------*/
-CREATE OR REPLACE FUNCTION CheckIfECAIsAvailable(IdECA INTEGER,DateRange daterange)
+CREATE OR REPLACE FUNCTION CheckIfECAIsAvailable(Id INTEGER,IdECA INTEGER,DateRange daterange)
 RETURNS BOOLEAN AS $$
 DECLARE
-    OccupiedDateRanges daterange[] := (SELECT ARRAY(SELECT "DateRange" FROM "Assignment" WHERE "IdECA"=IdECA));
+    OccupiedDateRanges daterange[] := (SELECT ARRAY(SELECT "DateRange" FROM "Assignment" WHERE "IdECA"=IdECA AND "Id"<>Id));
     OccupiedDateRange daterange;
 BEGIN
-    raise info '%', array_length(OccupiedDateRanges,1);
     IF (OccupiedDateRanges IS NULL) THEN
         RETURN TRUE;
     END IF;

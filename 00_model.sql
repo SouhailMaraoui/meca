@@ -26,7 +26,9 @@ DROP TABLE IF EXISTS  "Hierarchy";
 
 CREATE TABLE "Hierarchy" (
 	"Id" integer NOT NULL PRIMARY KEY,
-	"Name" varchar(50) NOT NULL
+	"Since" date NOT NULL,
+	"Name" varchar(50) NOT NULL,
+	"Name_since" date NOT NULL
 );
 
 CREATE TABLE "UO"(
@@ -34,7 +36,7 @@ CREATE TABLE "UO"(
 	"Since" date NOT NULL,
 	"Name" varchar(50) NOT NULL,
 	"Name_since" date NOT NULL,
-	"IdParent" integer NOT NULL REFERENCES "UO"("Id"),
+	"IdParent" integer REFERENCES "UO"("Id"),
 	"IdParent_since" date NOT NULL,
 	"IdHierarchical" integer NOT NULL REFERENCES "Hierarchy"("Id"),
 	"IdHierarchical_since" date NOT NULL

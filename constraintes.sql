@@ -146,7 +146,7 @@ CREATE SEQUENCE prevision_id_seq
     values (nextval('assignment_id_seq'), now(), IdProgram,now(),IdUOActivity,now(),WorkQuantity,now(),DateRange,now())
     returning "Prevision"."Id";
   $BODY$
-    LANGUAGE SQL
+    LANGUAGE SQL;
     
 /*TEST FUNCTION create prevision */
 select create_prevision(1, 1, 66, '[2022-04-14,2022-04-20]')
