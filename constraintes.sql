@@ -115,17 +115,17 @@ TRUE : en dehors de la date
 SELECT check_eca_can_assigned_dates(daterange('2018-03-09', '2018-03-11', '[]'));
 
 /*TEST FUNCTION create assigment */
-select create_assignment(1,1,1,'[2022-04-14,2022-04-20]',25)
+select create_assignment(1,1,1,'[2022-04-14,2022-04-20]',25);
 
 /*check  FUNCTION create assigment */
-select * from "Assignment"
+select * from "Assignment";
 
 /* add extension for  btree_gist */
- CREATE EXTENSION btree_gist
+ CREATE EXTENSION btree_gist;
 
 /* add constraint for  Assignment to add ECA availability check */
 ALTER TABLE "Assignment"
-  ADD CONSTRAINT recurring_eca_period_excl EXCLUDE USING GIST ("IdECA" WITH = ,"DateRange" WITH &&)
+  ADD CONSTRAINT recurring_eca_period_excl EXCLUDE USING GIST ("IdECA" WITH = ,"DateRange" WITH &&);
 
 
 
@@ -152,7 +152,7 @@ CREATE SEQUENCE prevision_id_seq
 select create_prevision(1, 1, 66, '[2022-04-14,2022-04-20]')
 
 /*check  FUNCTION create prevision */
-select * from "Prevision"
+select * from "Prevision";
 
 
 select eca."Firstname",eca."Lastname",uoact."Id" as uoActivityId,prog."Id" as idProgramme,prog."Name" as nommProgramme,prog."DateRange" as dateProgramme,

@@ -1,3 +1,18 @@
+
+
+/*Function to publish program*/
+
+/*Function to remove hierarchy*/
+
+/*View for Assignments*/
+/*View for Assignments history*/
+
+/*View for Prevision*/
+/*View for Prevision history*/
+
+/*Function to see coverage*/
+
+
 CREATE FUNCTION get_eca_activities(ecaId INTEGER)
 RETURNS TABLE (Activity varchar)
 LANGUAGE plpgsql
