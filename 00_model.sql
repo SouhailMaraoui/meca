@@ -130,7 +130,7 @@ CREATE TABLE "Program"(
 	"IsPublished_since" date NOT NULL
 );
 
-
+/*To specify the needs of each UO in relation to which Activity they need, for what work quantity, and the period*/
 CREATE TABLE "Prevision"(
 	"Id" integer NOT NULL PRIMARY KEY,
 	"Since" date NOT NULL,
@@ -157,6 +157,7 @@ CREATE TABLE "Prevision_During"(
 );
 
 
+/*To assign ECAs to UOs*/
 CREATE TABLE "Assignment"(
 	"Id" integer NOT NULL PRIMARY KEY,
 	"Since" date NOT NULL,

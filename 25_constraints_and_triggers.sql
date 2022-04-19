@@ -72,7 +72,7 @@ CREATE TRIGGER UO_ACTIVITY_DLT_TRIGGER
 
 /*UO - Trigger - on update or delete. */
 CREATE TRIGGER UO_UPT_DLT_TRIGGER
-    BEFORE UPDATE OR DELETE ON "UO" FOR EACH ROW
+    AFTER UPDATE OR DELETE ON "UO" FOR EACH ROW
     EXECUTE PROCEDURE OnUOUpdateOrDelete();
 
 /*Hierarchy - Trigger - when updating, change since */

@@ -27,10 +27,12 @@ SELECT CreateAssignment(0,0,3,1,10,daterange('2022-05-01','2022-06-01','[]'));
 SELECT CreateAssignment(0,0,3,1,10,daterange('2022-05-15','2022-05-20','[]'));
 
 
+/*--------------------------------------------------------------------------------------------------------------------*/
+
 
 /*Update an Assignment and see it reflected in since column (if done in a different day) and if it's added to _during table*/
 SELECT * from "Assignment";
-UPDATE "Assignment" SET "WorkQuantity"=20 where "IdECA"=0;
+UPDATE "Assignment" SET "WorkQuantity"=25 where "IdECA"=0;
 SELECT * from "Assignment_During";
 
 
