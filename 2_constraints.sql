@@ -303,28 +303,38 @@ DECLARE
 BEGIN
     IF (TG_OP = 'UPDATE') THEN
         IF(OLD."Name" <> NEW."Name") then
-            UPDATE "UO" SET "Name" = CURRENT_DATE WHERE "Id"=NEW."Id";
+            UPDATE "UO" SET "Name_since" = CURRENT_DATE WHERE "Id"=NEW."Id";
+            INSERT INTO "UO_Name_During" VALUES (OLD."Id",OLD."Name",During);
         ELSIF(OLD."IdParent" <> NEW."IdParent") then
-            UPDATE "UO" SET "IdParent" = CURRENT_DATE WHERE "Id"=NEW."Id";
+            UPDATE "UO" SET "IdParent_since" = CURRENT_DATE WHERE "Id"=NEW."Id";
+            INSERT INTO "UO_Parent_During" VALUES (OLD."Id",OLD."IdParent",During);
         ELSIF(OLD."IdHierarchical" <> NEW."IdHierarchical") then
-            UPDATE "UO" SET "IdHierarchical" = CURRENT_DATE WHERE "Id"=NEW."Id";
-        ELSE
-            RETURN OLD;
+            UPDATE "UO" SET "IdHierarchical_since" = CURRENT_DATE WHERE "Id"=NEW."Id";
+            INSERT INTO "UO_Hierarchy_During" VALUES (OLD."Id",OLD."IdHierarchical",During);
         END IF;
     ELSIF (TG_OP = 'DELETE') THEN
-        /*Move UOActivity, Assignments and Prevision to During*/
         DELETE FROM "Prevision" WHERE "IdUO"=OLD."Id";
         DELETE FROM "Assignment" WHERE "IdUO"=OLD."Id";
         DELETE FROM "UOActivity" WHERE "IdUO"=OLD."Id";
+        INSERT INTO "UO_During" VALUES (OLD."Id",During);
     END IF;
 
-    INSERT INTO "UO_During" VALUES (OLD."Id",OLD."Name",OLD."IdParent",OLD."IdHierarchical",During);
     RETURN OLD;
 END;$$ LANGUAGE plpgsql ;
 
-CREATE TRIGGER UO_DLT_TRIGGER
-BEFORE DELETE ON "UO" FOR EACH ROW
+DROP TRIGGER UO_UPT_DLT_TRIGGER ON "UO";
+CREATE TRIGGER UO_UPT_DLT_TRIGGER
+AFTER UPDATE OR DELETE ON "UO" FOR EACH ROW
 EXECUTE PROCEDURE OnUOUpdateOrDelete();
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+
 
 
 

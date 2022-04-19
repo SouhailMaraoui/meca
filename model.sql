@@ -19,8 +19,10 @@ DROP TABLE IF EXISTS  "ActivityWorkUnit";
 
 DROP TABLE IF EXISTS  "UO";
 DROP TABLE IF EXISTS  "UO_During";
+DROP TABLE IF EXISTS  "UO_Name_During";
+DROP TABLE IF EXISTS  "UO_Parent_During";
+DROP TABLE IF EXISTS  "UO_Hierarchy_During";
 DROP TABLE IF EXISTS  "Hierarchy";
-
 
 CREATE TABLE "Hierarchy" (
 	"Id" integer NOT NULL PRIMARY KEY,
@@ -40,12 +42,23 @@ CREATE TABLE "UO"(
 
 CREATE TABLE "UO_During"(
 	"Id" integer NOT NULL,
+	"During" daterange NOT NULL
+);
+CREATE TABLE "UO_Name_During"(
+	"Id" integer NOT NULL,
 	"Name" varchar(50) NOT NULL,
+	"During" daterange NOT NULL
+);
+CREATE TABLE "UO_Parent_During"(
+	"Id" integer NOT NULL,
 	"IdParent" integer NOT NULL,
+	"During" daterange NOT NULL
+);
+CREATE TABLE "UO_Hierarchy_During"(
+	"Id" integer NOT NULL,
 	"IdHierarchical" integer NOT NULL REFERENCES "Hierarchy"("Id"),
 	"During" daterange NOT NULL
 );
-
 
 
 CREATE TABLE "ActivityWorkUnit"(
